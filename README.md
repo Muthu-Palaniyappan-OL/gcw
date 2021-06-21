@@ -1,2 +1,1 @@
-# gcw
-A Generic Corporate Website
+# Generic Corporate Website
