@@ -155,7 +155,47 @@ header .container nav.menu_button i{
 
 
 /*******************************************/
-/*              Nav Slide Down             */
+/*                  Footer                 */
 /*******************************************/
-
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        'newsletter newsletter newsletter'
+        'navigation contact_us contact_us'
+        'navigation . social_media'
+        '. copy_right .'
+        '. policy .';
+    background-color: #000000;
+    color: white;
+}
+.newsletter_footer_grid{
+    grid-area: newsletter;
+}
+.navigation_footer_grid{
+    grid-area: navigation;
+}
+.contact_us_footer_grid{
+    grid-area: contact_us;
+}
+.social_media_footer_grid{
+    grid-area: social_media;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-self: start;
+    gap: 10px;
+}
+.social_media_footer_grid a{
+    padding: 10px;
+}
+.social_media_footer_grid a:hover{
+    background-color: #3b3b3b;
+}
+.copy_right_footer_grid{
+    grid-area: copy_right;
+}
+.policy_footer_grid{
+    grid-area: policy;
+}
 /*******************************************/
