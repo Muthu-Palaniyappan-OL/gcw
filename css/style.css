@@ -1,0 +1,161 @@
+*{
+    margin: 0px;    /*Zeroing Default Things*/
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    top: 0px;
+}
+
+/*******************************************/
+/*              Logo Animation             */
+/*******************************************/
+.opening_logo_loading_img{
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.loading_cover{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.logo_loading_things{
+    visibility: hidden;
+}
+/*******************************************/
+
+
+/*******************************************/
+/*                  Header                 */
+/*******************************************/
+header{
+    color: white;
+    height: 6vh;
+    background-color: black;
+    position: sticky;
+    width: 100%;
+    z-index: 1;
+}
+header .container{
+    width: 80%;
+    position: relative;
+    margin: auto;
+}
+
+@media screen and (max-width: 816px){
+    header .container{
+        width: 100%;
+    }
+}
+
+header .container span{
+    position: absolute;
+    left: 0px;
+    padding: 10px;
+    font-size: large;
+    font-weight: bold;
+}
+
+header .container nav.all_links_displayed ul{
+    position: absolute;
+    right: 0px;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+}
+
+header .container li{
+    padding: 10px;
+}
+
+header .container li:hover{
+    padding: 10px;
+    background-color: rgb(61, 61, 61);
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+header .container nav.menu_button{
+    position: absolute;
+    display: none;
+    right: 0px;
+    padding: 10px;
+}
+
+header .container nav.menu_button i{
+    font-size: 1.3em;
+}
+
+@media screen and (max-width: 656px){
+    header .container nav.menu_button{
+        display: inline-block;
+    }
+    header .container nav.all_links_displayed{
+        display: none;
+    }
+}
+/*******************************************/
+
+
+/*******************************************/
+/*              Nav Slide Down             */
+/*******************************************/
+.nav_slideDown{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 0%;
+    background-color: #000000;
+}
+.nav_slideDown ul{
+    list-style: none;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 5vh;
+}
+.nav_slideDown ul a{
+    text-decoration: none;
+    color: rgb(189, 189, 189);
+}
+.nav_slideDown ul a:hover{
+    color: white;
+}
+.nav_close{
+    position: absolute;
+    top: 3vw;
+    right: 3vw;
+    cursor: pointer;
+    color: white;
+}
+.nav_slideDown i{
+    font-size: 1.6em;
+    color: rgb(189, 189, 189);
+}
+.nav_slideDown i:hover{
+    font-size: 1.6em;
+    color: white;
+}
+/*******************************************/
+
+
+
+/*******************************************/
+/*              Nav Slide Down             */
+/*******************************************/
+
+/*******************************************/
