@@ -1,55 +1,53 @@
-<footer>
-
-    <div class="navigation_footer_grid">
-        <ul>
-            <a href=""><li>About Us</li></a>
-            <a href=""><li>Products & Solutions</li></a>
-            <a href=""><li>Investor</li></a>
-            <a href=""><li>Media</li></a>
-            <a href=""><li>Careers</li></a>
-            <a href=""><li>Contact Us</li></a>
-        </ul>
-    </div>
-
-
-    <div class="newsletter_footer_grid">
+<div class="newsletter">
+    <strong>Subscribe To Our Weekly NewsLetters</strong>
+    <div class="newsletter_form">
         <form action="index.php" method="post">
-            <input type="text" name="email_newsletter"  id="email_newsletter">
-            <input type="submit" value="Submit" name="newsletter_submit">
+            <input type="text" name="email_newsletter" placeholder="Enter Your Email Address" id="email_newsletter">
+            <input type="submit" value="Subscribe Now" name="newsletter_submit">
         </form>
     </div>
-
-
-    <div class="social_media_footer_grid">
-        <a href="#">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-        </a>
-        <a href="#">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-        </a>
-        <a href="#">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-        </a>
-        <a href="#">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-        </a>
+</div>
+<?php
+    if(isset($_POST["newsletter_submit"])){
+        //email php validation
+        if (!filter_var($_POST["email_newsletter"], FILTER_VALIDATE_EMAIL)) {
+            echo "<script>redTheEmailBox();</script>";
+        }
+        else{
+            echo "<script>doneSubscribe();</script>";
+        }
+    }
+?>
+<div class="greycover"></div>
+<div class="thank_you_for_subscribing">
+    <i class="fa fa-times nav_close" aria-hidden="true" onclick="closeSubscribe()"></i>
+    <span>Thank You For Subscribing</span>
+</div>
+<footer>
+    <div class="flex_footer">
+        <ul>
+            <a href=""><li>About Us</li></a>
+            |<a href=""><li>Products & Solutions</li></a>
+            |<a href=""><li>Investor</li></a>
+            |<a href=""><li>Media</li></a>
+            |<a href=""><li>Careers</li></a>
+            |<a href=""><li>Contact Us</li></a>
+        </ul>
     </div>
-
-
-    <div class="contact_us_footer_grid">
-        <address>
-            19th Floor, HBC Towers, Mount Road, Chennai 560001, India
-        </address>
-        <p>Tel: +91 8976236789</p>
+    <div class="socialmedia_footer">
+        <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
     </div>
-
-
-    <div class="copy_right_footer_grid">&copy; GCW 2021</div>
-
-
-    <div class="policy_footer_grid">
-        <a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Legal</a>
+    <div class="copyright_Footer">
+        &copy; GCW @ 2021
     </div>
-
-
+    <div class="legal_footer">
+        <ul>
+            <a href="#"><li>Privacy Policy</li></a>
+            |<a href="#"><li>Terms And Conditions</li></a>
+            |<a href="#"><li>Legal</li></a>
+        </ul>
+    </div>
 </footer>

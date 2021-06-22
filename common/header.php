@@ -18,7 +18,7 @@
 </header>
 <nav id="nav_slideDown" class="nav_slideDown">
     <i class="fa fa-times nav_close" aria-hidden="true" onclick="closeNav()"></i>
-    <ul>
+    <ul id="nav_slideDown_ul">
         <a href=""><li>About Us</li></a>
         <a href=""><li>Products & Solutions</li></a>
         <a href=""><li>Investor</li></a>
