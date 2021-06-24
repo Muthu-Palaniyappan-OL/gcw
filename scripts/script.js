@@ -28,12 +28,19 @@ function closeNav(){
 function closeSubscribe(){
     $(".greycover").css("visibility","hidden");
     $(".thank_you_for_subscribing").css("visibility","hidden");
+    $(".aldready_subscribed").css("visibility","hidden");
 }
 
 //This function starts after email passes php verification
 function doneSubscribe(){
     $(".greycover").css("visibility","visible");
     $(".thank_you_for_subscribing").css("visibility","visible");
+}
+
+//This function starts after email passes php verification
+function aldreadySubscribed(){
+    $(".greycover").css("visibility","visible");
+    $(".aldready_subscribed").css("visibility","visible");
 }
 
 //Focus the exmail box which is near subscribe button after the php email validation
