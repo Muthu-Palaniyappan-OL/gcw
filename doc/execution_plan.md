@@ -1,13 +1,13 @@
-# Steps for building the project
-    - Header
-    - Footer(newsletter PHP MySQL, important links)
-    - Home Page
-    - About US Page
-    - Investor Page
-    - Media Page
-    - Career Page
-    - Contact Us Page
-    - Admin (Login, DashBoard UI)
-    - Admin Features Implementation
-    - Employee Announcements UI
-    - Empoyee Features
+## Project Plan
+ - [X] Header
+ - [X] Footer(newsletter PHP MySQL, important links)
+ - [] Home Page
+ - [] About US Page
+ - [] Investor Page
+ - [] Media Page
+ - [] Career Page
+ - [] Contact Us Page
+ - [] Admin (Login, DashBoard UI)
+ - [] Admin Features Implementation
+ - [] Employee Announcements UI
+ - [] Empoyee Features
