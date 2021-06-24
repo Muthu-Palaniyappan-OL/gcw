@@ -3,7 +3,8 @@
 * [Problem Project Solves](#problem-it-solves)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Get in touch with creator](#contact)
+* [Project Plan](#project-plan)
+* [Get In Touch With Creator](#contact)
 
 ## General info
 This is a website and needed technological solution for any generic corporate company.
@@ -41,12 +42,29 @@ To run this project, You need LAMP(Apache, MySQL, PHP) Webserver:
  
  - Run these SQL queries.
 
+ For Geting into MySQL CLI:
+
  ```
- CREATE DATABASE gcw_db;
- CREATE TABLE newsletter_subscribers(email VARCHAR(20), PRIMARY KEY (email));
+ $ sudo mysql
+ ```
+ Run these in MySQL CLI:
+
+ ```
+ mysql> CREATE DATABASE gcw_db;
+ mysql> CREATE TABLE newsletter_subscribers(email VARCHAR(20), PRIMARY KEY (email));
+ ```
+ Run This to Exit MySQL CLI:
+ 
+ ```
+ mysql> exit;
  ```
 
- - Goto to URl [localhost/gcw](localhost/gcw) via your browser to see your website.
+ - Goto to URl **localhost/gcw** via your browser to see your website.
+
+## Project Plan
+
+ Check The [Project Plan](doc/execution_plan.md).
 
 ## Contact
-For more information and suggestions contact [Muthu Palaniyappan OL](mailto:muthu892542@gmail.com).
+ 
+ For more information and suggestions contact [Muthu Palaniyappan OL](mailto:muthu892542@gmail.com).
