@@ -24,29 +24,24 @@ function closeNav(){
     }, 600);
 }
 
-//This function is for closing the succesful subscribing button
-function closeSubscribe(){
-    $(".greycover").css("visibility","hidden");
-    $(".thank_you_for_subscribing").css("visibility","hidden");
-    $(".aldready_subscribed").css("visibility","hidden");
-}
-
-//This function starts after email passes php verification
-function doneSubscribe(){
-    $(".greycover").css("visibility","visible");
-    $(".thank_you_for_subscribing").css("visibility","visible");
-}
-
-//This function starts after email passes php verification
-function aldreadySubscribed(){
-    $(".greycover").css("visibility","visible");
-    $(".aldready_subscribed").css("visibility","visible");
-}
-
 //Focus the exmail box which is near subscribe button after the php email validation
 function redTheEmailBox(){
     $("#email_newsletter").css("border","3px solid red");
     alert("Invalid Email!");
     $("#email_newsletter").focus();
+}
+
+// Function Used To Display Message
+function displayMessage(string){
+    $("body").after('<div class="greyCoverOverTheMain"><div class="messageBox"><div class="messageBoxClose" onclick="closeMessage()"><i class="fa fa-times" aria-hidden="true"></i></div><span class="messageBoxMsg"></span></div></div>');
+    $(".greyCoverOverTheMain").css("visibility","visible");
+    $(".messageBox").css("visibility","visible");
+    $(".messageBoxMsg").html(string);
+}
+
+// Function Called When Message Box Needs to be closed
+function closeMessage(string){
+    $(".greyCoverOverTheMain").css("visibility","hidden");
+    $(".messageBox").css("visibility","hidden");
 }
 ////////////////////////////////////////////////////////////////////////////////

@@ -3,9 +3,6 @@
 <head>
     <!-- Basic Meta Tags-->
     <?php include "common/meta_data.php"; ?>
-
-    <?php include "common/php_common_functions.php" ?>
-    <?php recordUser("landingpage"); ?>
     
     <!-- Base Links -->
     <base href=".">
@@ -44,7 +41,7 @@
     
     <!-- Main Body Of The Page-->
     <main>
-        hi
+        
     </main>
 
     <!-- Newsletter And Footer Of The Page-->

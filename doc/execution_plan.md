@@ -1,10 +1,8 @@
 ## Project Plan
  - [X] *Header*
  - [X] *Footer*(newsletter PHP MySQL, important links)
- - [ ] Refactor *Script to JS*,Single Line *Message* Box, 
-       Write a *bash script* for MySQL and others and add *no of visiters* and active visitors counter to php code, 
-       *Clean* Up The code,
-       Collect Statges of the code.
+ - [X]  Write a *bash script*
+ - [ ] *Basic Admin Live User Feature*
  - [ ] *Home Page* & collect statges of the code.
  - [ ] *About US Page*  & collect statges of the code.
  - [ ] *Investor Page* & collect statges of the code.

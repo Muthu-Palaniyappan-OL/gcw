@@ -1,3 +1,4 @@
+<!-- NewsLetter Div--->
 <div class="newsletter">
     <strong>Subscribe To Our Weekly NewsLetters</strong>
     <div class="newsletter_form">
@@ -7,6 +8,8 @@
         </form>
     </div>
 </div>
+
+<!-- Footer--->
 <footer>
     <div class="flex_footer">
         <ul>
@@ -35,34 +38,32 @@
         </ul>
     </div>
 </footer>
-<div class="greycover"></div>
-<div class="thank_you_for_subscribing">
-    <i class="fa fa-times nav_close" aria-hidden="true" onclick="closeSubscribe()"></i>
-    <span>Thank You For Subscribing</span>
-</div>
-<div class="aldready_subscribed">
-    <i class="fa fa-times nav_close" aria-hidden="true" onclick="closeSubscribe()"></i>
-    <span>Aldready Subscribed</span>
-</div>
+
 <?php
+    //Embeded PHP Script For NewsLetter Submmision
+    
+    
+    
+    
     if(isset($_POST["newsletter_submit"])){
         //email php validation
+        $conn = mysqli_connect("localhost:3306","muthu","muthumuthu","gcw_db");
         if (!filter_var($_POST["email_newsletter"], FILTER_VALIDATE_EMAIL)) {
             echo "<script>redTheEmailBox();</script>";
         }
         else{
-            $conn = mysqli_connect("localhost:3306","muthu","muthumuthu","gcw_db");
             if(!$conn) die("Not Able to connect to database");
             $sql = "SELECT * FROM `newsletter_subscribers` WHERE email='".$_POST["email_newsletter"]."';";
             $result = mysqli_query($conn,$sql);
             if(mysqli_num_rows($result)==0){
                 $sql = "INSERT INTO `newsletter_subscribers` VALUES ('".$_POST["email_newsletter"]."');";
                 $result = mysqli_query($conn,$sql);
-                echo "<script>doneSubscribe();</script>";
+                echo "<script>displayMessage('Thanks For Subscribing');</script>";
             }
             else{
-                echo "<script>aldreadySubscribed();</script>";
+                echo "<script>displayMessage('Aldready Subscribed');</script>";
             }
         }
+        mysqli_close($conn);
     }
 ?>
