@@ -10,28 +10,28 @@
 <footer>
     <div class="flex_footer">
         <ul>
-            <a href=""><li>About Us</li></a>
-            |<a href=""><li>Products & Solutions</li></a>
-            |<a href=""><li>Investor</li></a>
-            |<a href=""><li>Media</li></a>
-            |<a href=""><li>Careers</li></a>
-            |<a href=""><li>Contact Us</li></a>
+            <a href="pages/aboutUs/index.php"><li>About Us</li></a>
+            |<a href="pages/products/index.php"><li>Products & Solutions</li></a>
+            |<a href="pages/investor/index.php"><li>Investor</li></a>
+            |<a href="pages/media/index.php"><li>Media</li></a>
+            |<a href="pages/careers/index.php"><li>Careers</li></a>
+            |<a href="pages/contactUs/index.php"><li>Contact Us</li></a>
         </ul>
     </div>
     <div class="socialmedia_footer">
-        <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
     </div>
     <div class="copyright_Footer">
         &copy; GCW @ 2021
     </div>
     <div class="legal_footer">
         <ul>
-            <a href="#"><li>Privacy Policy</li></a>
-            |<a href="#"><li>Terms And Conditions</li></a>
-            |<a href="#"><li>Legal</li></a>
+            <a href="legal/privacypolicy.php"><li>Privacy Policy</li></a>
+            |<a href="legal/termsandconditions.php"><li>Terms And Conditions</li></a>
+            |<a href="legal/legal.php"><li>Legal</li></a>
         </ul>
     </div>
 </footer>
