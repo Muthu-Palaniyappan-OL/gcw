@@ -64,12 +64,13 @@ To run this project, You need LAMP(Apache, MySQL, PHP) Webserver:
 
  - Goto to URl **localhost/gcw** via your browser to see your website.
 
- if you dont want to waste time in lot of these stuffs i would suggest you to run these commands below (a automated script) which i create will work in all Ubuntu/Ubuntu Derivates
+ **if you don't want to waste time** in lot of these stuffs i would suggest you to run these commands below (a automated script) which i create will work in all Ubuntu/Ubuntu Derivates
 
- Download [Click Here For Easy Installation Script](scripts/auto_setup.sh)
+ Download Click Here For Easy Installation Everything in [Script](scripts/) Folder
  Then run the below
  > $ bash auto_setup.sh
- in bash shell where you have kept the downloaded bash script
+
+ in bash shell where you have kept the downloaded the whole script folder.
 
 ## Project Plan
 
