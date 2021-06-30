@@ -54,7 +54,7 @@ To run this project, You need LAMP(Apache, MySQL, PHP) Webserver:
  mysql> USE gcw_db;
  mysql> CREATE TABLE newsletter_subscribers(email VARCHAR(20), PRIMARY KEY (email));
  mysql> CREATE TABLE `gcw_db`.`visitor_count` ( `id` INT(255) NOT NULL AUTO_INCREMENT , `page` VARCHAR(15) NOT NULL , `visit_count` INT(255) NOT NULL , `date` DATE NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
- mysql> CREATE TABLE activeUser(session BIGINT(255), time TIME, PRIMARY KEY (session));
+ mysql> CREATE TABLE activeUser(session VARCHAR(30), time TIME, ipaddr VARCHAR(25), PRIMARY KEY (session));
  ```
  Run This to Exit MySQL CLI:
  
@@ -64,13 +64,14 @@ To run this project, You need LAMP(Apache, MySQL, PHP) Webserver:
 
  - Goto to URl **localhost/gcw** via your browser to see your website.
 
- **if you don't want to waste time** in lot of these stuffs i would suggest you to run these commands below (a automated script) which i create will work in all Ubuntu/Ubuntu Derivates
+ ## if you don't want to waste time in lot of these stuffs
+ i would suggest you to run the bash script below (a automated script) which was created by me which will work in all Ubuntu/Ubuntu Derivates
 
- Download Click Here For Easy Installation Everything in [Script](scripts/) Folder
- Then run the below
+ Download the [Script](scripts/) Folder and Then run the below after CDing into the folder script
+
  > $ bash auto_setup.sh
 
- in bash shell where you have kept the downloaded the whole script folder.
+ in bash shell where you have kept the whole downloaded script folder along with sql files.
 
 ## Project Plan
 

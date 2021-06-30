@@ -28,4 +28,4 @@ INSERT INTO newsletter_subscribers VALUES
 CREATE TABLE `gcw_db`.`visitor_count` ( `id` INT(255) NOT NULL AUTO_INCREMENT , `page` VARCHAR(15) NOT NULL , `visit_count` INT(255) NOT NULL , `date` DATE NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 /*Active Users*/
-CREATE TABLE activeUser(session BIGINT(255), time TIME, PRIMARY KEY (session));
+CREATE TABLE activeUser(session VARCHAR(30), time TIME, ipaddr VARCHAR(25), PRIMARY KEY (session));

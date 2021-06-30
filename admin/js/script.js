@@ -31,18 +31,35 @@ $(document).ready(function() {
     $(".summaryContent").show();
 });
 
-function showHint(str) {
-    if (str.length == 0) {
-      document.getElementById("txtHint").innerHTML = "";
-      return;
-    } else {
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("txtHint").innerHTML = this.responseText;
-        }
-      };
-      xmlhttp.open("GET", "gethint.php?q=" + str, true);
-      xmlhttp.send();
-    }
-  }  
+function showUsers() {
+  str = document.getElementById("viewDateOption").value;
+  if (str.length == 0) {
+    document.getElementById("userTable").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("userTable").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "php/loadUsers.php?q=" + str , true);
+    xmlhttp.send();
+  }
+} 
+
+function showActiveUsers() {
+  if (str.length == 0) {
+    document.getElementById("ActiveUserTable").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("ActiveUserTable").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET", "php/loadActiveUsers.php" , true);
+    xmlhttp.send();
+  }
+} 

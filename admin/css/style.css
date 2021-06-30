@@ -10,7 +10,7 @@
 header{
     background-color: #000;
     color: white;
-    height: 7vh;
+    height: 10vh;
 }
 header h1{
     padding: 0.3em;
@@ -25,7 +25,7 @@ header h1{
 main {
     display: grid;
     grid-template-columns: 10vw auto;
-    grid-template-rows: 93vh;
+    grid-template-rows: 100%;
 }
 
 aside{
@@ -66,12 +66,45 @@ main div.content{
 /*******************************************/
 /*             Summary Content             */
 /*******************************************/
-.summaryContent table{
-    border: 1px solid black;
-    border-collapse: collapse;
+.summaryContent{
+    display: grid !important;
 }
-td,th,tr{
-    border: 1px solid black;
+.summaryContent table{
+    justify-self: center;
+    align-self: center;
+}
+.summaryContent td,th,tr{
     padding: 10px;
+}
+.summaryContent td, th{
+    padding: 10px;
+    text-align: center;
+}
+.summaryContent th{
+    width: 20vw;
+}
+.summaryContent tr:nth-child(even){
+    background-color: #fff;
+}
+.summaryContent tr:nth-child(odd){
+    background-color: #ccc;
+}
+.summaryContent tr:nth-child(1){
+    background-color: #0071E3;
+    color: white;
+}
+.summaryContent select{
+    position: absolute;
+    top: 13%;
+    left: 80%;
+    outline: 0px;
+    border: 0px;
+    border-bottom: 1px solid #0071E3;
+    border-top: 1px solid #0071E3;
+    width: 10vw;
+}
+.summaryContent option:checked{
+    background-color: #0071E3 !important;
+    color: white;
 }
 /*******************************************/

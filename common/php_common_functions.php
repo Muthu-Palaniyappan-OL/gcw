@@ -3,7 +3,8 @@ function recordUser($pagename){
     if(!isset($_SESSION)){
         session_start();
         $conn = mysqli_connect("localhost:3306","muthu","muthumuthu","gcw_db");
-        $sql = "INSERT INTO `active_user` VALUES ('".session_id()."','".date("H:i:s")."');";
+        $sql = "INSERT INTO `activeUser` VALUES ('".session_id()."','".date("H:i:s")."','".$_SERVER["REMOTE_ADDR"]."');";
+        echo $sql;
         mysqli_query($conn, $sql);
         $sql = "SELECT * FROM `visitor_count` WHERE `date`='".date("Y-m-d")."';";
         $result = mysqli_query($conn, $sql);
@@ -25,18 +26,5 @@ function recordUser($pagename){
         $_SESSION["userActivityStatus"] = "active";
         mysqli_close($conn);
     }
-}
-function numberOFusers(){
-    $conn = mysqli_connect("localhost:3306","muthu","muthumuthu","gcw_db");
-    $sql = "SELECT * FROM `visitor_count`;";
-    $result = mysqli_query($conn, $sql);
-    while($row = mysqli_fetch_assoc($result)){
-        echo "<tr>";
-        echo "<td>".$row["page"]."</td>";
-        echo "<td>".$row["visit_count"]."</td>";
-        echo "<td>".$row["date"]."</td>";
-        echo "</tr>";
-    }
-    mysqli_close($conn);
 }
 ?>

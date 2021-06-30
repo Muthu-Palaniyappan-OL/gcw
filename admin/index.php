@@ -36,19 +36,37 @@
         </aside>
         <div class="mainDetailsContent">
             <div class="summaryContent">
-                <!-- -->
+                <!-- Total Number Of Users -->
                 <h3>Total Number Of Users</h3>
-                <table>
-                <tr>
-                    <th>Page</th>
-                    <th>Visitor Count</th>
-                    <th>Date</th>
-                </tr>
-                <?php numberOFusers(); ?>
-                </table>
+                <select id="viewDateOption">
+                    <option value="Today">Today</option>
+                    <option value="Month">Past Month</option>
+                    <option value="Year">Past Year</option>
+                    <option value="AllTime">All Time</option>
+                </select>
+            
                 <br>
-                <hr>
+
+                <table id="userTable">
+                    <script>
+                        showUsers();
+                        setInterval(function(){showUsers();},1000);
+                    </script>
+                </table>
+                
+                <br><hr>
+                
                 <h3>Active Users</h3>
+
+                <br>
+
+                <table id="ActiveUserTable">
+                    <script>
+                        showActiveUsers();
+                        setInterval(function(){showActiveUsers();},1000);
+                    </script>
+                </table>
+                
                 <hr>
             </div>
             <div class="announcementsContent">
