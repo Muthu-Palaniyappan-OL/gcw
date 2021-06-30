@@ -66,13 +66,6 @@ main div.content{
 /*******************************************/
 /*             Summary Content             */
 /*******************************************/
-.summaryContent{
-    display: grid !important;
-}
-.summaryContent table{
-    justify-self: center;
-    align-self: center;
-}
 .summaryContent td,th,tr{
     padding: 10px;
 }

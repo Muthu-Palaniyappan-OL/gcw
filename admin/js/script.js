@@ -1,9 +1,14 @@
 function closeAllContentDivs(){
     $(".summaryContent").hide();
+    $(".summaryContent").css("display","none");
     $(".announcementsContent").hide();
+    $(".announcementsContent").css("display","none");
     $(".editpageContent").hide();
+    $(".editpageContent").css("display","none");
     $(".contactUsContent").hide();
+    $(".contactUsContent").css("display","none");
     $(".jobApplicationsContent").hide();
+    $(".jobApplicationsContent").css("display","none");
 }
 
 function openContentDiv(whatDivToOpen){
