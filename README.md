@@ -64,6 +64,7 @@ To run this project, You need LAMP(Apache, MySQL, PHP) Webserver:
 
  - Goto to URl **localhost/gcw** via your browser to see your website.
 
+
  ## if you don't want to waste time in lot of these stuffs
  i would suggest you to run the bash script below (a automated script) which was created by me which will work in all Ubuntu/Ubuntu Derivates
 
@@ -73,10 +74,19 @@ To run this project, You need LAMP(Apache, MySQL, PHP) Webserver:
 
  in bash shell where you have kept the whole downloaded script folder along with sql files.
 
-## Project Plan
+ ## Important Note
+ I prefer you to Run 
+ ```
+ php /var/www/html/gcw/admin/php/killAllUnwantedSessions.php
+ ```
+ command frequently so that everything is clean or add a crontab for automating this
 
- Check The [Project Plan](doc/execution_plan.md).
-
+ if you picking to use crontab add
+ ```
+ */10 * * * * php /var/www/html/gcw/admin/php/killAllUnwantedSessions.php
+ ```
+ this to your crontab
+ 
 ## Contact
  
  For more information and suggestions contact [Muthu Palaniyappan OL](mailto:muthu892542@gmail.com).

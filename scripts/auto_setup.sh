@@ -48,9 +48,19 @@ echo "Restarting the Apache2 And MySQL..."
 sudo service apache2 restart
 sudo service mysql restart
 
+#Installing CronTab
+echo "Restarting the Apache2 And MySQL..."
+sudo install crontab
+
 sudo git clone https://github.com/Muthu-Palaniyappan-OL/gcw.git
  
 sudo mysql < ./auto_setup_mysql.sql
+
+# I prefer You to run this command frequently or better add a crontab to automate this process
+###############################################################
+# php /var/www/html/gcw/admin/php/killAllUnwantedSessions.php #
+###############################################################
+
 
 echo "Website is live: "
 echo "Go to http://localhost/gcw/"
