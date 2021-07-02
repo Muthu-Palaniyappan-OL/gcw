@@ -1,4 +1,12 @@
 <?php
-    $conn = mysqli_connect("localhost:3306","muthu","muthumuthu","gcw_db");
-    mysqli_close($conn);
+    include "databaseConnect.php";
+    $sql = "SELECT * FROM `activeUser`";
+    $result = mysqli_query($conn, $sql);
+    while($row = mysqli_fetch_assoc($result)){
+        if($row["time"]  < date("H:i:s", strtotime("now"))){
+            $sql1 = "DELETE FROM `activeUser` WHERE `ipaddr`='".$row["ipaddr"]."';";
+            mysqli_query($conn, $sql1);
+            }
+            }    
+    include "../../common/closeDbConn.php";
 ?>

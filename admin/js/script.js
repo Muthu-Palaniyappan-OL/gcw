@@ -1,3 +1,4 @@
+// This closes all the content divs in admin dashboard
 function closeAllContentDivs(){
     $(".summaryContent").hide();
     $(".summaryContent").css("display","none");
@@ -11,6 +12,7 @@ function closeAllContentDivs(){
     $(".jobApplicationsContent").css("display","none");
 }
 
+// This is called when a user clicks the button
 function openContentDiv(whatDivToOpen){
     closeAllContentDivs();
     if(whatDivToOpen == "summaryContent"){
@@ -30,12 +32,14 @@ function openContentDiv(whatDivToOpen){
     }
 }
 
-
+// When page is loaded fir div is displayed
 $(document).ready(function() {
-    closeAllContentDivs();
-    $(".summaryContent").show();
+  closeAllContentDivs();
+  $(".summaryContent").show();
 });
 
+
+// This sends ajax reuest to loadUsers.php and get the number of users
 function showUsers() {
   str = document.getElementById("viewDateOption").value;
   if (str.length == 0) {
@@ -48,11 +52,12 @@ function showUsers() {
         document.getElementById("userTable").innerHTML = this.responseText;
       }
     };
-    xmlhttp.open("GET", "php/loadUsers.php?q=" + str , true);
+    xmlhttp.open("GET", "php/loadUsers.php?q=" + str , true); // Str here is the condition the user provided like today, past year, past month
     xmlhttp.send();
   }
 } 
 
+// This sends ajax reuest to loadUsers.php and get the number of Active users
 function showActiveUsers() {
   if (str.length == 0) {
     document.getElementById("ActiveUserTable").innerHTML = "";

@@ -1,6 +1,6 @@
 <?php
     echo "<tr><th>Page</th><th>Visitor Count</th></tr>";
-    $conn = mysqli_connect("localhost:3306","muthu","muthumuthu","gcw_db");
+    include "../../common/databaseConnect.php";
     if($_GET["q"] == "Today")
     $sql = "SELECT * FROM `visitor_count` WHERE `date`='".date("Y-m-d")."';";
     if($_GET["q"]=="Month")
@@ -16,5 +16,5 @@
         echo "<td>".$row["visit_count"]."</td>";
         echo "</tr>";
     }
-    mysqli_close($conn);
+    include "../../common/closeDbConn.php";
 ?>

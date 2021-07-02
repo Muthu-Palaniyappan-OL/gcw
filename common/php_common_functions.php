@@ -1,23 +1,9 @@
 <?php
-
-function getUserIpAddr(){
-    if(!empty($_SERVER['HTTP_CLIENT_IP'])){
-        //ip from share internet
-        $ip = $_SERVER['HTTP_CLIENT_IP'];
-    }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
-        //ip pass from proxy
-        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    }else{
-        $ip = $_SERVER['REMOTE_ADDR'];
-    }
-    return $ip;
-}
-
 function recordUser($pagename){
     if(!isset($_SESSION)){
         session_start();
-        $conn = mysqli_connect("localhost:3306","muthu","muthumuthu","gcw_db");
-        $sql = "INSERT INTO `activeUser` VALUES ('".session_id()."','".date("H:i:s")."','".$_SERVER["REMOTE_ADDR"]."');";
+        include "databaseConnect.php";
+        $sql = "INSERT INTO `activeUser` VALUES ('".session_id()."','".date("H:i:s", strtotime("+1 minutes"))."','".$_SERVER["REMOTE_ADDR"]."');";
         mysqli_query($conn, $sql);
         $sql = "SELECT * FROM `visitor_count` WHERE `date`='".date("Y-m-d")."';";
         $result = mysqli_query($conn, $sql);
@@ -35,12 +21,20 @@ function recordUser($pagename){
         }
         $sql ="UPDATE `visitor_count` SET visit_count=visit_count+1 WHERE `date`='".date("Y-m-d")."' AND `page`='".$pagename."';";
         mysqli_query($conn, $sql);
-        $_SESSION["IP"] = getUserIpAddr();
-        echo getUserIpAddr();
-        $_SESSION["country"] = @json_decode(file_get_contents("https://api.country.is"+$_SESSION["IP"]))->geoplugin_countryName;
-        $_SESSION["userType"] = "normalUser";
-        $_SESSION["userActivityStatus"] = "active";
-        mysqli_close($conn);
+        // User $_SERVER['REMOTE_ADDR'] When deploying
+        $_SESSION["IP"] = trim(shell_exec("dig +short myip.opendns.com @resolver1.opendns.com")); //reading public IP address
+        $_SESSION["country"] = json_decode(file_get_contents("https://api.country.is/".$_SESSION["IP"]))->country;
+        $_SESSION["userType"] = "normalUser"; //Declaring the user type whether admin or non admin
+        $_SESSION["Device"] = getallheaders()["User-Agent"]; //Gets browser and device details
+        include "closeDbConn.php";
+    }
+    else{
+        if($_SESSION["userType"]=="normalUser"){
+            include "databaseConnect.php";
+            $sql ="UPDATE `activeUser` SET visit_count=visit_count+1 WHERE `date`='".date("Y-m-d")."' AND `page`='".$pagename."';";
+            mysqli_query($conn, $sql);
+            include "closeDbConn.php";
+        }
     }
 }
 ?>

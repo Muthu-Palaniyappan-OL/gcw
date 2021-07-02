@@ -27,6 +27,8 @@
     </header>
     
     <main>
+        
+        <!-- Asde For All The Admin Related Links -->
         <aside>
             <button onclick="openContentDiv('summaryContent');">Summary</button>
             <button onclick="openContentDiv('announcementsContent');">Announcements</button>
@@ -34,7 +36,11 @@
             <button onclick="openContentDiv('contactUsContent');">Contactus Submissions</button>
             <button onclick="openContentDiv('jobApplicationsContent');">Job Applications</button>
         </aside>
+
+        <!-- This is the main Div where all the type of links load-->
         <div class="mainDetailsContent">
+            
+            <!-- This is the Div where active users and visit count is displayed-->
             <div class="summaryContent">
                 <!-- Total Number Of Users -->
                 <h3>Total Number Of Users</h3>
@@ -47,11 +53,12 @@
             
                 <br>
 
+                <!--This table displays Total users -->
                 <table id="userTable">
                     <script>
-                        showUsers();
-                        setInterval(function(){showUsers();},1000);
-                    </script>
+                        showUsers();    // This function is avialable in js folder of this folder
+                        setInterval(function(){showUsers();},1000); //Sending Ajax Request every 1 sec
+                        </script>
                 </table>
                 
                 <br><hr>
@@ -59,28 +66,37 @@
                 <h3>Active Users</h3>
 
                 <br>
-
+                
+                <!--This table displays Active users -->
                 <table id="ActiveUserTable">
                     <script>
-                        showActiveUsers();
-                        setInterval(function(){showActiveUsers();},1000);
-                    </script>
+                        showActiveUsers(); // This function is avialable in js folder of this folder
+                        setInterval(function(){showActiveUsers();},1000); //Sending Ajax Request every 1 sec
+                        </script>
                 </table>
                 
                 <hr>
             </div>
+            
+            <!-- This is the Div where anncouncements can be made -->
             <div class="announcementsContent">
                 <!-- -->
                 announcementsContent
             </div>
+
+            <!-- This is the Div where pages can be edited -->
             <div class="editpageContent">
                 <!-- -->
                 editpageContent
             </div>
+
+            <!-- This is the Div where contact us subbmision forms are displayed -->
             <div class="contactUsContent">
                 <!-- -->
                 contactUsContent
             </div>
+
+            <!-- This is the Div where job application submission forms are displayed -->
             <div class="jobApplicationsContent">
                 <!-- -->
                 jobApplicationsContent
