@@ -72,4 +72,8 @@ function showActiveUsers() {
     xmlhttp.open("GET", "php/loadActiveUsers.php" , true);
     xmlhttp.send();
   }
-} 
+}
+
+function logout(){
+  location.href = "logout.php";
+}

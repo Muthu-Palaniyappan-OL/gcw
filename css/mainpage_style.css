@@ -1,3 +1,31 @@
+/*******************************************/
+/*                   Main                  */
+/*******************************************/
 main{
     display: grid;
+    overflow: hidden;
+    grid-template-areas: 
+    "Cover Cover Cover Cover"
+    "Building Building AboutUS AboutUS";
 }
+
+.Cover > img, .Building > img{
+    width: 100%;
+    height: auto;
+}
+
+.Cover{
+    grid-area: Cover;
+}
+
+.Building{
+    grid-area: Building;
+    margin: 10px;
+}
+
+.AboutUS{
+    grid-area: AboutUS;
+    align-self: center;
+    margin: 10px;
+}
+/*******************************************/

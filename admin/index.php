@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if($_SESSION["userType"]=="Admin"){
+        ;
+    }
+    else{
+        header("Location: login.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +44,7 @@
             <button onclick="openContentDiv('editpageContent');">Edit Pages</button>
             <button onclick="openContentDiv('contactUsContent');">Contactus Submissions</button>
             <button onclick="openContentDiv('jobApplicationsContent');">Job Applications</button>
+            <button onclick="logout()">Log Out</button>
         </aside>
 
         <!-- This is the main Div where all the type of links load-->
@@ -87,7 +97,7 @@
             <!-- This is the Div where pages can be edited -->
             <div class="editpageContent">
                 <!-- -->
-                editpageContent
+                <i class="fa fa-pencil" aria-hidden="true"></i> Edit <a href="../index.php">Landing Page</a>
             </div>
 
             <!-- This is the Div where contact us subbmision forms are displayed -->

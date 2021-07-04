@@ -38,7 +38,7 @@
 /*******************************************/
 header{
     color: white;
-    height: 6vh;
+    height: 8vh;
     background-color: black;
     position: sticky;
     width: 100%;
@@ -366,3 +366,20 @@ main pre.legal{
 }
 /*******************************************/
 
+/*******************************************/
+/*            Edit Content Form            */
+/*******************************************/
+button.editContentForm, form.editContentForm > input[type="submit"]{
+    display: inline-block;
+    padding: 10px;
+    background-color: #0071E3;
+    color: white;
+    margin: 10px;
+    outline: 0px;
+    border: 0px;
+}
+
+.editContentForm{
+    display: inline-block;
+}
+/*******************************************/

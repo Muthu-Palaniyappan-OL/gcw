@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,7 @@
     <?php include "common/meta_data.php"; ?>
 
     <?php include "common/php_common_functions.php" ?>
-    <?php recordUser("landingpage"); ?>
-    
+    <?php if($_SESSION["userType"]=="Admin"){;}else{recordUser("landingpage");} ?>    
     <!-- Base Links -->
     <base href=".">
 
@@ -14,8 +14,8 @@
     <title>Generic Corporate Company</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mainpage_style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mainpage_style.css">
     <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- Font Awwesome 4 -->
 
     <!-- Java Script -->
@@ -43,12 +43,27 @@
     <!-- Header Of The Page-->
     <?php include "common/header.php"; ?>
     
-    <!-- Main Body Of The Page-->
     <main>
-        hi
+        <div class="Cover">
+            <img src="./assets/img/Hands_Coat.png" alt="A Image" srcset="">
+        </div>
+        <div class="Building">
+            <img src="./assets/img/structural.png" alt="A Image" srcset="">
+        </div>
+        <div class="AboutUS">
+            <h3>About Us</h3>
+            <p class="editable" id="PabtUs">
+                <?php showData("abtUs"); ?>
+            </p>
+        </div>
     </main>
 
     <!-- Newsletter And Footer Of The Page-->
     <?php include "common/footer.php"; ?>
+
+    <?php
+        // This adds Save And Cancell Buttons If The userType is Admin
+        adminPrevileges("landingpage");
+    ?>
 </body>
 </html>

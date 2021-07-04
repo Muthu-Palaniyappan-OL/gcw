@@ -84,6 +84,7 @@ To run this project, You need LAMP(Apache, MySQL, PHP) Webserver:
  if you picking to use crontab add
  ```
  */10 * * * * php /var/www/html/gcw/admin/php/killAllUnwantedSessions.php
+ */10 * * * * rm /var/lib/php/sessions/*
  ```
  this to your crontab
  

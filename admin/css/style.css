@@ -101,3 +101,34 @@ main div.content{
     color: white;
 }
 /*******************************************/
+
+/*******************************************/
+/*             Login             */
+/*******************************************/
+.loginDiv{
+    display: block !important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ccc;
+    padding: 10px;
+}
+
+.loginDiv input{
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    outline: 0px;
+    border: 0px;
+}
+
+.loginDiv input[type="text"]:focus, input[type="password"]:focus{
+    border-bottom: 3px solid black;
+}
+
+.loginDiv input[type="submit"]:hover{
+    background-color: white;
+    color: black;
+}
+/*******************************************/
