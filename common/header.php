@@ -5,7 +5,7 @@
             <ul>
                 <a href="pages/aboutUs/index.php"><li>About Us</li></a>
                 <a href="pages/products/index.php"><li>Products & Solutions</li></a>
-                <a href="pages/investor/index/php"><li>Investor</li></a>
+                <a href="pages/investor/index.php"><li>Investor</li></a>
                 <a href="pages/media/index.php"><li>Media</li></a>
                 <a href="pages/media/index.php"><li>Careers</li></a>
                 <a href="pages/contactUs/index.php"><li>Contact Us</li></a>

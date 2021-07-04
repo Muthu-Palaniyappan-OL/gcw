@@ -34,7 +34,6 @@
     <header>
         <h1>Gceneric Coprate Company - Dashboard</h1>
     </header>
-    
     <main>
         
         <!-- Asde For All The Admin Related Links -->
@@ -97,8 +96,9 @@
             <!-- This is the Div where pages can be edited -->
             <div class="editpageContent">
                 <!-- -->
-                <i class="fa fa-pencil" aria-hidden="true"></i> Edit <a href="../index.php">Landing Page</a>
-                <i class="fa fa-pencil" aria-hidden="true"></i> Edit <a href="../pages/aboutUs/index.php">About Us Page</a>
+                <i class="fa fa-pencil" aria-hidden="true"></i> Edit <a href="../index.php">Landing Page</a><br>
+                <i class="fa fa-pencil" aria-hidden="true"></i> Edit <a href="../pages/aboutUs/index.php">About Us Page</a><br>
+                <i class="fa fa-pencil" aria-hidden="true"></i> Edit <a href="../pages/investor/index.php">Investor Page</a><br>
             </div>
 
             <!-- This is the Div where contact us subbmision forms are displayed -->

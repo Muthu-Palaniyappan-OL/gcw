@@ -1,0 +1,40 @@
+/*******************************************/
+/*                   Main                  */
+/*******************************************/
+main{
+    display: grid;
+    overflow: hidden;
+    grid-template-areas: 
+    ". Building ."
+    "InvInfo InvInfo InvInfo";
+}
+
+.Building{
+    grid-area: Building;
+}
+
+.Building > img{
+    width: 100%;
+    margin: 10px;
+    justify-self: center;
+    height: auto;
+}
+
+.InvInfo{
+    grid-area: InvInfo;
+    align-self: center;
+    margin: 10px;
+}
+
+.InvInfo h3, p{
+    text-align: center;
+}
+
+@media screen and (max-width: 596px){
+    main{
+        grid-template-areas: 
+        "Building"
+        "InvInfo";
+    }
+}
+/*******************************************/

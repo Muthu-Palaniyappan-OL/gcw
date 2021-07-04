@@ -10,6 +10,11 @@
         echo $sql;
         mysqli_query($conn, $sql);
     }
+    if(isset($_POST["invInfo"])){
+        $sql = "UPDATE `Htmldata` SET `txt`='".$_POST["invInfo"]."' WHERE `name`='invInfo';";
+        echo $sql;
+        mysqli_query($conn, $sql);
+    }
     include "../../common/closeDbConn.php";
     header("Location: ../index.php")
 ?>

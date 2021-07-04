@@ -62,5 +62,9 @@ function updateHiddenInput(name){
         name="Hist";
         $("#" + name).val($("#P"+name).html().trim());
     }
+    if(name=="investor"){
+        name="invInfo";
+        $("#" + name).val($("#P"+name).html().trim());
+    }
 }
 ////////////////////////////////////////////////////////////////////////////////

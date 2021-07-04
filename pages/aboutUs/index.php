@@ -5,8 +5,7 @@
         <?php include "../../common/meta_data.php"; ?>
         
         <?php include "../../common/php_common_functions.php" ?>
-        <?php if($_SESSION["userType"]=="Admin"){echo "Yes";}else{recordUser("aboutUs");} ?>    
-        <?php session_start(); ?>
+        <?php if($_SESSION["userType"]=="Admin"){session_start();}else{recordUser("aboutUs");} ?>    
         <!-- Base Links -->
     <base href="../../">
 

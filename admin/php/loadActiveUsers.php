@@ -6,6 +6,7 @@
     $result = mysqli_query($conn, $sql);
     while($row = mysqli_fetch_assoc($result)){
         echo "<tr>";
+        session_abort();
         session_id($row["session"]);
         session_start();
         echo "<td>".$_SESSION["IP"]."</td>";
