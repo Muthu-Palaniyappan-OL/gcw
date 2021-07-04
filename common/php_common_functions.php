@@ -32,6 +32,7 @@ function recordUser($pagename){
     }
     else{
         if($_SESSION["userType"]=="normalUser"){
+            if($pagename == "landingpage")
             include "databaseConnect.php";
             $sql ="UPDATE `activeUser` SET visit_count=visit_count+1 WHERE `date`='".date("Y-m-d")."' AND `page`='".$pagename."';";
             mysqli_query($conn, $sql);
@@ -57,19 +58,20 @@ function adminPrevileges($FromThisCell){
         // Makes all editable class P tag Editable
         echo '<script>$(".editable").attr("contenteditable","true");</script>';
         
-        // For landing page and other page path is different
-        if($FromThisCell == "landingpage")
+        // Form for editing
         echo '<form action="./admin/php/commonEditHtml.php" method="POST" class="editContentForm">';
-        else
-        echo '<form action="../../admin/php/commonEditHtml.php" method="POST" class="editContentForm">';
-
+        
         // This is amount of hidden input fields i have to make for each page
         if($FromThisCell == "landingpage"){
             echo '<input type="hidden" name="abtUs" id="abtUs">';
         }
+        if($FromThisCell == "aboutUs"){
+            echo '<input type="hidden" name="abtUs" id="abtUs">';
+            echo '<input type="hidden" name="Hist" id="Hist">';
+        }
 
         // Submit Button That Saves The Changes and goes to admin page
-        echo '<input type="Submit" onclick="updateHiddenInput(\''.'landingpage'.'\');" value="Save Changes">';
+        echo '<input type="Submit" onclick="updateHiddenInput(\''.'aboutUs'.'\');" value="Save Changes">';
         echo '</form>';
 
         // Cancels the changes and goes the admin page

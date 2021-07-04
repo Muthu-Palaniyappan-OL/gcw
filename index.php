@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,9 @@
     <?php include "common/meta_data.php"; ?>
 
     <?php include "common/php_common_functions.php" ?>
-    <?php if($_SESSION["userType"]=="Admin"){;}else{recordUser("landingpage");} ?>    
+    <?php if($_SESSION["userType"]=="Admin"){;}else{recordUser("landingpage");} ?>
+    <?php session_start(); ?>
+    
     <!-- Base Links -->
     <base href=".">
 

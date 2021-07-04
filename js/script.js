@@ -56,5 +56,11 @@ function updateHiddenInput(name){
         name="abtUs";
         $("#" + name).val($("#P"+name).html().trim());
     }
+    if(name=="aboutUs"){
+        name="abtUs";
+        $("#" + name).val($("#P"+name).html().trim());
+        name="Hist";
+        $("#" + name).val($("#P"+name).html().trim());
+    }
 }
 ////////////////////////////////////////////////////////////////////////////////

@@ -98,6 +98,7 @@
             <div class="editpageContent">
                 <!-- -->
                 <i class="fa fa-pencil" aria-hidden="true"></i> Edit <a href="../index.php">Landing Page</a>
+                <i class="fa fa-pencil" aria-hidden="true"></i> Edit <a href="../pages/aboutUs/index.php">About Us Page</a>
             </div>
 
             <!-- This is the Div where contact us subbmision forms are displayed -->

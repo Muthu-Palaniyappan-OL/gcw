@@ -5,8 +5,8 @@ main{
     display: grid;
     overflow: hidden;
     grid-template-areas: 
-    "Cover Cover Cover Cover"
-    "Building Building AboutUS AboutUS";
+    "Building AboutUS"
+    "Hist Hist";
 }
 
 .Cover > img, .Building > img{
@@ -14,8 +14,9 @@ main{
     height: auto;
 }
 
-.Cover{
-    grid-area: Cover;
+.Hist{
+    grid-area: Hist;
+    padding: 10px;
 }
 
 .Building{
@@ -32,9 +33,9 @@ main{
 @media screen and (max-width: 596px){
     main{
         grid-template-areas: 
-        "Cover"
         "Building"
-        "AboutUS";
+        "AboutUS"
+        "Hist";
     }
 }
 /*******************************************/
