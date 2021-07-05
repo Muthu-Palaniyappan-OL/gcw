@@ -15,6 +15,21 @@
         echo $sql;
         mysqli_query($conn, $sql);
     }
+    if(isset($_POST["product1"])){
+        $sql = "UPDATE `Htmldata` SET `txt`='".$_POST["product1"]."' WHERE `name`='product1';";
+        echo $sql;
+        mysqli_query($conn, $sql);
+    }
+    if(isset($_POST["product2"])){
+        $sql = "UPDATE `Htmldata` SET `txt`='".$_POST["product2"]."' WHERE `name`='product2';";
+        echo $sql;
+        mysqli_query($conn, $sql);
+    }
+    if(isset($_POST["product3"])){
+        $sql = "UPDATE `Htmldata` SET `txt`='".$_POST["product3"]."' WHERE `name`='product3';";
+        echo $sql;
+        mysqli_query($conn, $sql);
+    }
     include "../../common/closeDbConn.php";
     header("Location: ../index.php")
 ?>

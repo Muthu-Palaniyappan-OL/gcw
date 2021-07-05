@@ -1,0 +1,60 @@
+/*******************************************/
+/*                   Main                  */
+/*******************************************/
+main{
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    grid-template-areas: 
+    'card1 card2 card3';
+}
+
+h2{
+    text-align: center;
+}
+
+.productCard1,
+.productCard2,
+.productCard3{
+    background-color: #ccc;
+    margin: 10px;
+    max-width: 400px;
+    align-self: center;
+    justify-self: center;
+}
+
+.productCard1{
+    grid-area: card1;
+}
+
+.productCard2{
+    grid-area: card2;
+}
+
+.productCard3{
+    grid-area: card3;
+}
+
+.productCard1 > .productLook, .productCard2 > .productLook , .productCard3 > .productLook{
+    padding: 10px;
+}
+
+.productCard1 > p, .productCard2 > p, .productCard3 > p{
+    padding: 10px;
+}
+
+.productCard1 > .productLook i, .productCard2 > .productLook i, .productCard3 > .productLook i{
+    font-size: 5em;
+}
+
+@media screen and (max-width: 596px){
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "card1"
+        "card2"
+        "card3";
+    }
+}
+/*******************************************/

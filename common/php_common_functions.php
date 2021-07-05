@@ -111,6 +111,11 @@ function adminPrevileges($FromThisCell){
         if($FromThisCell == "investor"){
             echo '<input type="hidden" name="invInfo" id="invInfo">';
         }
+        if($FromThisCell == "products"){
+            echo '<input type="hidden" name="product1" id="product1">';
+            echo '<input type="hidden" name="product2" id="product2">';
+            echo '<input type="hidden" name="product3" id="product3">';
+        }
 
         // Submit Button That Saves The Changes and goes to admin page
         echo '<input type="Submit" onclick="updateHiddenInput(\''.$FromThisCell.'\');" value="Save Changes">';

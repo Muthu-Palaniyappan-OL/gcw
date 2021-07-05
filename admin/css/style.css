@@ -132,3 +132,17 @@ main div.content{
     color: black;
 }
 /*******************************************/
+
+/*******************************************/
+/*               Annoucement               */
+/*******************************************/
+.closeAnnouncement{
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    border: 0px;
+    color: red;
+    background-color: white;
+    font-size: 1.2em;
+}
+/*******************************************/

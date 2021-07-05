@@ -48,7 +48,7 @@ function closeMessage(string){
 
 
 ////////////////////////////////////////////////////////////////////////////////
-//                               Menu Button                                  //
+//                             Updating Hidden Input                          //
 ////////////////////////////////////////////////////////////////////////////////
 
 function updateHiddenInput(name){
@@ -64,6 +64,15 @@ function updateHiddenInput(name){
     }
     if(name=="investor"){
         name="invInfo";
+        $("#" + name).val($("#P"+name).html().trim());
+    }
+    if(name=="products"){
+        name="product1";
+        $("#" + name).val($("#P"+name).html().trim());
+        name="product2";
+        $("#" + name).val($("#P"+name).html().trim());
+        name="product3";
+        console.log(name);
         $("#" + name).val($("#P"+name).html().trim());
     }
 }

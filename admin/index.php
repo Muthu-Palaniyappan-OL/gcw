@@ -90,7 +90,13 @@
             <!-- This is the Div where anncouncements can be made -->
             <div class="announcementsContent">
                 <!-- -->
-                announcementsContent
+                <?php
+                    include "./php/loadAnnouncementsForAdmin.php";
+                ?>
+                <div class="announcementDiv">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ratione.
+                    <button class="closeAnnouncement" onclick="deleteAnnouncement('hi')"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+                </div>
             </div>
 
             <!-- This is the Div where pages can be edited -->
@@ -99,6 +105,7 @@
                 <i class="fa fa-pencil" aria-hidden="true"></i> Edit <a href="../index.php">Landing Page</a><br>
                 <i class="fa fa-pencil" aria-hidden="true"></i> Edit <a href="../pages/aboutUs/index.php">About Us Page</a><br>
                 <i class="fa fa-pencil" aria-hidden="true"></i> Edit <a href="../pages/investor/index.php">Investor Page</a><br>
+                <i class="fa fa-pencil" aria-hidden="true"></i> Edit <a href="../pages/products/index.php">Product Page</a><br>
             </div>
 
             <!-- This is the Div where contact us subbmision forms are displayed -->

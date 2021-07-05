@@ -1,0 +1,15 @@
+/*******************************************/
+/*            Announcement Box             */
+/*******************************************/
+.announcementBox{
+    background-color: #eee;
+    margin: 10px;
+    padding: 10px;
+}
+.announcementBox h3{
+    text-decoration: underline;
+}
+.announcementBox p{
+    padding: 10px;
+}
+/*******************************************/

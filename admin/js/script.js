@@ -74,6 +74,27 @@ function showActiveUsers() {
   }
 }
 
+// Logginout As Admin
 function logout(){
   location.href = "logout.php";
+}
+
+// Called When A Delete Announcement is Made
+function deleteAnnouncement(whichAnnouncement) {
+  $.ajax({
+      url:'php/deleteAnnouncement.php?s=' + whichAnnouncement,
+      complete: function (response) {
+        $('.announcementsContent').html(response.responseText);
+      },
+      error: function () {
+          console.log('There was an error!');
+      }
+  });
+   return false;
+}
+
+// Called When A Make Announcement is Made
+function makeAnnouncement() {
+  $.get("php/makeAnnouncement.php");
+  return false;
 }

@@ -37,3 +37,10 @@ INSERT INTO Htmldata VALUES
 ("hist","Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quis totam libero aliquam minus amet excepturi deleniti asperiores! Deserunt blanditiis repellendus, sit repudiandae vero quo et voluptatibus aperiam soluta explicabo."),
 ("found","Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quis totam libero aliquam minus amet excepturi deleniti asperiores! Deserunt blanditiis repellendus, sit repudiandae vero quo et voluptatibus aperiam soluta explicabo."),
 ("etc","Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quis totam libero aliquam minus amet excepturi deleniti asperiores! Deserunt blanditiis repellendus, sit repudiandae vero quo et voluptatibus aperiam soluta explicabo.");
+
+CREATE TABLE `gcw_db`.`media` ( `title` VARCHAR(50) NOT NULL , `meta` VARCHAR(25) NOT NULL , `text` VARCHAR(1000) NOT NULL , PRIMARY KEY (`title`)) ENGINE = InnoDB;
+
+INSERT INTO `media` VALUES
+("Title 1", "2020 11 50" , "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quis totam libero aliquam minus amet excepturi deleniti asperiores! Deserunt blanditiis repellendus, sit repudiandae vero quo et "),
+("Title 2", "2020 11 51" , "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quis totam libero aliquam minus amet excepturi deleniti asperiores! Deserunt blanditiis repellendus, sit repudiandae vero quo et "),
+("Title 3", "2020 11 52" , "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quis totam libero aliquam minus amet excepturi deleniti asperiores! Deserunt blanditiis repellendus, sit repudiandae vero quo et ");
