@@ -90,13 +90,25 @@
             <!-- This is the Div where anncouncements can be made -->
             <div class="announcementsContent">
                 <!-- -->
-                <?php
+                <h4>Title of announcements and actions on it</h4>
+                <table>
+                    <tr>
+                        <th>Title</th>
+                        <th>Actions</th>
+                    <tr>
+                    <?php
                     include "./php/loadAnnouncementsForAdmin.php";
-                ?>
-                <div class="announcementDiv">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ratione.
-                    <button class="closeAnnouncement" onclick="deleteAnnouncement('hi')"><i class="fa fa-window-close" aria-hidden="true"></i></button>
-                </div>
+                    ?>
+                </table>
+                <br>
+                <hr>
+                <br>
+                <h4>Make A New Announcement</h4>
+                <form action="php/makeAnnouncement.php" class="announcementSubmit" method="post">
+                    <input type="text" name="title" id="title"><br>
+                    <textarea type="text" name="Message" id="Message"></textarea><br>
+                    <input type="submit" name="announcementSubmit" value="&#9993; Make Announcement">
+                </form>
             </div>
 
             <!-- This is the Div where pages can be edited -->

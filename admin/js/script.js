@@ -81,16 +81,7 @@ function logout(){
 
 // Called When A Delete Announcement is Made
 function deleteAnnouncement(whichAnnouncement) {
-  $.ajax({
-      url:'php/deleteAnnouncement.php?s=' + whichAnnouncement,
-      complete: function (response) {
-        $('.announcementsContent').html(response.responseText);
-      },
-      error: function () {
-          console.log('There was an error!');
-      }
-  });
-   return false;
+  location.href = 'php/deleteAnnouncement.php?s=' + whichAnnouncement;
 }
 
 // Called When A Make Announcement is Made

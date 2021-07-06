@@ -145,4 +145,38 @@ main div.content{
     background-color: white;
     font-size: 1.2em;
 }
+table, td, th, tr{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.announcementSubmit input[type="text"]{
+    padding: 10px;
+    margin: 10px;
+    width: 40vw;
+    border: 0px;
+    outline: 1px;
+    border-bottom: 2px solid black;
+}
+.announcementSubmit textarea{
+    padding: 10px;
+    margin: 10px;
+    width: 40vw;
+    border: 0px;
+    outline: 1px;
+    border-bottom: 2px solid black;
+}
+.announcementSubmit input[type="text"]:focus{
+    border-bottom: 5px solid black;
+}
+.announcementSubmit textarea:focus{
+    border-bottom: 5px solid black;
+}
+.announcementSubmit input[type="submit"]{
+    padding: 10px;
+    margin: 10px;
+    outline: 0px;
+    border: 0px;
+    background-color: green;
+    color: white;
+}
 /*******************************************/
