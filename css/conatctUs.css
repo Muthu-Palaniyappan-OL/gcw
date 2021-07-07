@@ -1,0 +1,79 @@
+/*******************************************/
+/*                   Main                  */
+/*******************************************/
+main{
+    display: grid;
+    overflow: hidden;
+    grid-template-areas: 
+        "form form"
+        "wearein wearein"
+        "map map"
+        "address address";
+}
+main h3{
+    grid-area: wearein;
+    text-align: center;
+}
+.map {
+    grid-area: map;
+    height: 200px;
+    padding: 10px;
+    margin: 10px;
+}
+.address{
+    grid-area: address;
+    margin: 10px;
+    padding: 10px;
+}
+form.ContactUsForm{
+    grid-area: form;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+        "heading heading" 
+        "name email"
+        "message message"
+        "submit submit";
+    margin: 10px;
+    padding: 10px;
+    background-color: #ccc;
+}
+form.ContactUsForm > input, form.ContactUsForm > textarea{
+    outline: 0px;
+    border: 0px;
+    height: 25px;
+}
+form.ContactUsForm h3{
+    grid-area: heading;
+    text-align: center;
+}
+form.ContactUsForm input[type="text"]{
+    grid-area: name;
+}
+form.ContactUsForm input[type="email"]{
+    grid-area: email;
+}
+form.ContactUsForm textarea{
+    grid-area: message;
+    height: 100px;
+}
+form.ContactUsForm input[type="submit"]{
+    grid-area: submit;
+    padding: 10px;
+    height: 35px;
+    background-color: green;
+    color: white;
+}
+form.ContactUsForm input[type="text"]:focus,form.ContactUsForm input[type="email"]:focus,form.ContactUsForm textarea:focus{
+    border-bottom: 5px solid black;
+}
+@media screen and (max-width: 600px) {
+    main{
+        grid-template-areas: 
+        "address address"
+        "form form"
+        "wearein wearein"
+        "map map";
+    }
+}
+/*******************************************/
