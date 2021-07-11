@@ -8,6 +8,8 @@
     <title>Apply For Job</title>
 
     <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="./css/mainpage_style.css">
+    <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- Font Awwesome 4 -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
@@ -100,7 +102,7 @@
             </tr>
             <tr>
                 <td>
-                    <input name="skip_submit" type="submit" value="Send Application" />
+                    <input name="submit" type="submit" value="Send Application" />
                 </td>
             </tr>
         </table>
@@ -108,3 +110,19 @@
 </body>
 
 </html>
+<?php
+    if(isset($_POST["submit"])){
+        include "../../common/databaseConnect.php";
+        $sql = "SELECT * FROM `jobApplications` WHERE `Email_Address`='".$_POST["Email_Address"]."';";
+        $result = mysqli_query($conn, $sql);
+        if(mysqli_num_rows($result)>0){
+            echo "<script>displayMessage('Aldready Registered.')</script>";
+        }
+        else{
+            $sql = "INSERT INTO `jobApplications` VALUES ('".$_POST["First_Name"]."','".$_POST["Last_Name"]."','".$_POST["Email_Address"]."','".$_POST["Portfolio"]."','".$_POST["Position"]."','".$_POST["Salary"]."','".$_POST["StartDate"]."','".$_POST["Phone"]."','".$_POST["Fax"]."','".$_POST["Relocate"]."','".$_POST["Organization"]."','".$_POST["Reference"]."');";
+            mysqli_query($conn, $sql);
+            echo "<script>displayMessage('Registered Succesfully.')</script>";
+        }
+        include "../../common/closeDbConn.php";
+    }
+?>

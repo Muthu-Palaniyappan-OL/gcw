@@ -94,3 +94,8 @@ function makeAnnouncement() {
 function deleteJobOpening(whichAnnouncement) {
   location.href = 'php/deleteJobOpening.php?s=' + whichAnnouncement;
 }
+
+
+function deleteTheContactus(whichAnnouncement) {
+  location.href = 'php/deleteContactUs.php?s=' + whichAnnouncement;
+}

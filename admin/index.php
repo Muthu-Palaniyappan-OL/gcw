@@ -123,7 +123,17 @@
             <!-- This is the Div where contact us subbmision forms are displayed -->
             <div class="contactUsContent">
                 <!-- -->
-                contactUsContent
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Mail</th>
+                        <th>Message</th>
+                        <th>Actions</th>
+                    <tr>               
+                    <?php
+                        include "./php/loadContactUs.php";
+                    ?>
+                </table>
             </div>
 
             <!-- This is the Div where job application submission forms are displayed -->
@@ -145,6 +155,22 @@
                         include "./php/displayJobOpening.php";
                     ?>
                 </table>
+                <br>
+                <hr>
+                <br>
+                <h3>Job Applicants</h3><br>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Mail</th>
+                        <th>Job</th>
+                        <th>Actions</th>
+                    <tr>               
+                    <?php
+                        include "./php/loadJobApplicants.php";
+                    ?>
+                </table>
+
             </div>
         </div>
     </main>

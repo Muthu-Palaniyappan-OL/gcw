@@ -49,3 +49,5 @@ CREATE TABLE `gcw_db`.`contactUsInfo` ( `name` VARCHAR(30) NOT NULL , `email` VA
 
 CREATE TABLE `gcw_db`.`jobs` ( `title` VARCHAR(50) NOT NULL , `discription` VARCHAR(1000) NOT NULL , `id` INT(10) NOT NULL AUTO_INCREMENT , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
+CREATE TABLE `gcw_db`.`jobApplications` ( `First_Name` VARCHAR(30) NOT NULL , `Last_Name` VARCHAR(30) NOT NULL , `Email_Address` VARCHAR(50) NOT NULL , `Portfolio` VARCHAR(30) NOT NULL , `Position` VARCHAR(30) NOT NULL , `Salary` INT(10) NOT NULL , `StartDate` VARCHAR(30) NOT NULL , `Phone` BIGINT(255) NOT NULL , `Fax` VARCHAR(15) NOT NULL , `Relocate` VARCHAR(30) NOT NULL , `Organization` VARCHAR(40) NOT NULL , `Reference` VARCHAR(100) NOT NULL, PRIMARY KEY (Email_Address)) ENGINE = InnoDB;
+
