@@ -1,0 +1,24 @@
+/*******************************************/
+/*                   Main                  */
+/*******************************************/
+main{
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+h2{
+    text-align: center;
+}
+
+.productCard{
+    background-color: #ccc;
+    margin: 10px;
+    max-width: 400px;
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+}
+
+/*******************************************/

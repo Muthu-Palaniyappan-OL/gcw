@@ -31,5 +31,5 @@
         mysqli_query($conn, $sql);
     }
     include "../../common/closeDbConn.php";
-    header("Location: ../index.php")
+    header("Location: ../index.php");
 ?>

@@ -97,7 +97,7 @@
                         <th>Actions</th>
                     <tr>
                     <?php
-                    include "./php/loadAnnouncementsForAdmin.php";
+                        include "./php/loadAnnouncementsForAdmin.php";
                     ?>
                 </table>
                 <br>
@@ -129,7 +129,22 @@
             <!-- This is the Div where job application submission forms are displayed -->
             <div class="jobApplicationsContent">
                 <!-- -->
-                jobApplicationsContent
+                <h3>Create A Job Opening</h3><br>
+                <form action="php/createJob.php" method="post">
+                    Title: <br><input type="text" name="jobTitle" id="jobTitle"> <br><br>
+                    Job Discription: <br><textarea name="jobDiscription" id="jobDiscription" ></textarea><br><br>
+                    <input type="submit" name="jobSubmit" value="Create A Job">
+                </form><br><hr><br>
+                <h3>Delete A Job Opening</h3><br>
+                <table>
+                    <tr>
+                        <th>Title</th>
+                        <th>Actions</th>
+                    <tr>               
+                    <?php
+                        include "./php/displayJobOpening.php";
+                    ?>
+                </table>
             </div>
         </div>
     </main>

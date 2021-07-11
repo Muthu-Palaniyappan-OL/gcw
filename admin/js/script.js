@@ -89,3 +89,8 @@ function makeAnnouncement() {
   $.get("php/makeAnnouncement.php");
   return false;
 }
+
+
+function deleteJobOpening(whichAnnouncement) {
+  location.href = 'php/deleteJobOpening.php?s=' + whichAnnouncement;
+}

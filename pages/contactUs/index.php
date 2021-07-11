@@ -93,10 +93,10 @@
         include "../../common/databaseConnect.php";
         $sql = "INSERT INTO `contactUsInfo` (`name`, `email`, `message`) VALUES('".$_POST["name"]."','".$_POST["email"]."','".$_POST["message"]."')";
         if(mysqli_query($conn, $sql)){
-            echo "<script>displayMessage('Registerd Succesfully')</script>";
+            echo "<script>displayMessage('Thank You For Contacting Us')</script>";
         }
         else{
-            echo "<script>displayMessage('Not Registered Succesfully')</script>";
+            echo "<script>displayMessage('Your aldready registered / Some Error Found')</script>";
         }
         include "../../common/closeDbConn.php";
     }

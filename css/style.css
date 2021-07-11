@@ -383,3 +383,35 @@ button.editContentForm, form.editContentForm > input[type="submit"]{
     display: inline-block;
 }
 /*******************************************/
+
+
+/*******************************************/
+/*             Job Application             */
+/*******************************************/
+body.jobApplication{
+    background-color: #C5B4E3;
+}
+table.jobApplication{
+    border-top: 10px solid purple;
+    width: 100%;
+    padding: 20px;
+    border-spacing: 1em 1em;
+    width: 60%;
+    margin: auto;
+    background-color: white;
+}
+table.jobApplication input[type="text"], textarea{
+    width: 100%;
+}
+table.jobApplication input[type="submit"]{
+    padding: 5px;
+    color: white;
+    background-color: purple;
+}
+@media screen and (max-width: 650px){
+    table.jobApplication{
+        margin: 10px;
+        width: 96%;
+    }
+}
+/*******************************************/
