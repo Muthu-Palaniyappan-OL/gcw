@@ -40,7 +40,7 @@
         }
     ?>
     
-    <!-- Header Of The Page-->
+    <!-- Header Of The Page -->
     <?php include "common/header.php"; ?>
     
     <main>
