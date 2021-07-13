@@ -74,9 +74,11 @@ To run this project, You need LAMP(Apache, MySQL, PHP) Webserver:
 
  Download the [Script](scripts/) Folder and Then run the below after CDing into the folder script
 
- > $ bash auto_setup.sh
+ > $ curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/scripts/auto_setup.sh && sh ./auto_setup.sh
 
  in bash shell where you have kept the whole downloaded script folder along with sql files.
+
+ *Remember You Need Sudo Previleges To Do This. Before Installing And Running This script Take a look at the [script](scripts/auto_setup.sh)*
 
  ## Important Note
  I prefer you to Run 

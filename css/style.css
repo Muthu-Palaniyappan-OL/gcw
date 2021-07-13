@@ -408,6 +408,11 @@ table.jobApplication input[type="submit"]{
     color: white;
     background-color: purple;
 }
+table.jobApplication a.links{
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.2em;
+}
 @media screen and (max-width: 650px){
     table.jobApplication{
         margin: 10px;

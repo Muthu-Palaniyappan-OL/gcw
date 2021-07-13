@@ -43,6 +43,7 @@
     <!-- Header Of The Page -->
     <?php include "common/header.php"; ?>
     
+    <!--Main -->
     <main>
         <div class="Cover">
             <img src="./assets/img/Hands_Coat.png" alt="A Image" srcset="">

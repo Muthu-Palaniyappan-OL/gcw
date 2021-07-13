@@ -48,9 +48,9 @@
     <main>
         <form action="pages/contactUs/index.php" method="post" class="ContactUsForm">
             <h3>Contact Us Form</h3>
-            <input type="text" name="name" id="name">
-            <input type="email" name="email" id="email"> <br><br>
-            <textarea name="message" id="message"></textarea>
+            <input type="text" name="name" id="name" placeholder="Name">
+            <input type="email" name="email" id="email" placeholder="Email"> <br><br>
+            <textarea name="message" id="message" placeholder="Type Your Message Here!"></textarea>
             <input type="submit" name="contactUs" value="Submit The Form">
         </form>
         <h3>We Are In</h3>

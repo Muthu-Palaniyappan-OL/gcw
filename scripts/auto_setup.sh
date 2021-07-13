@@ -1,68 +1,60 @@
-#!/bin/bash  
+#!/bin/bash
 
 ############################################################################
-#             THIS WORKS ONLY FOR DEBIAN BASED LINUX DISTRO                #
-# FOR ANY OTHER LINUX DISTRO CHANGE apt TO YOUR PARTICULAR PACKAGE MANAGER #
+#             THIS WORKS ONLY FOR FEDORA BASED LINUX DISTRO                #
+# FOR ANY OTHER LINUX DISTRO CHANGE YUM TO YOUR PARTICULAR PACKAGE MANAGER #
 #           UPDATE COMMAND TO YOUR PACKAGE MANAGER'S UPDATE COMMAND        #
+#                       THIS SCRIPT REQUIRES SUDO POWER                    #
 ############################################################################
 
 echo "Updating your repo..."
-# Update your Reporsitory
-sudo apt update
-sudo apt upgrade
+# Updating your Reporsitory
+sudo yum -y update
 
-echo "installing Apache2"
-# Install apache2 webser
-sudo apt install apache2 -y
+# installing GIT
+echo "Installing git..."
+sudo yum -y install git
 
-# installing php and related libraries
-echo "Installing PHP and Its Related Libraries..."
-sudo apt-get install php php-cgi php-common php-pear php-mbstring libapache2-mod-php php-mcrypt php-mysql -y
+echo "installing webserver..."
+# Install httpd webserver
+sudo yum -y install httpd
+
+# Starting httpd
+echo "Starting httpd..."
+sudo service httpd start
 
 echo "Installing Mysql..."
 # install mysql-server
-sudo apt install mysql-server mysql-client -y
+sudo yum -y install mysql-server mysql 
 
-echo "Starting the Apache2 And MySQL..."
-sudo service apache2 start
-sudo service mysql start
+# Starting MySQL
+echo "Starting Mysql..."
+sudo service mysqld start
+sudo service httpd restart
 
-echo "Securing MySQL..."
-sudo mysql_secure_installation # set root password and remember it
+echo "Installing php..."
+# install php
+sudo yum -y install php-cli php php-mysql php-pear-MDB2-Driver-mysqli.noarch php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json
 
-# installing phpmyadmin
-echo "Installing PHPMYADMIN..."
-sudo apt install phpmyadmin -y
-
-# installing GIT
-echo "Installing PHPMYADMIN..."
-sudo apt install git -y
-
-# installing VIM
-echo "Installing PHPMYADMIN..."
-sudo apt install vim -y
-
-
-#Restarting Services
 echo "Restarting the Apache2 And MySQL..."
-sudo service apache2 restart
-sudo service mysql restart
+sudo service httpd restart
+sudo service mysqld restart
 
-#Installing CronTab
-echo "Restarting the Apache2 And MySQL..."
-sudo install crontab
+echo "Downloading Repo..."
+sudo git clone https://github.com/Muthu-Palaniyappan-OL/gcw.git /var/www/html
 
-sudo git clone https://github.com/Muthu-Palaniyappan-OL/gcw.git
- 
-sudo mysql < ./auto_setup_mysql.sql
+echo "Downloading sql..."
+curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/scripts/auto_setup_mysql.sql
+
+echo "Executing sql..."
+sudo mysql < https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/scripts/auto_setup_mysql.sql
 
 # I prefer You to run this command frequently or better add a crontab to automate this process
 ###############################################################
 # php /var/www/html/gcw/admin/php/killAllUnwantedSessions.php #
 ###############################################################
 
-
 echo "Website is live: "
-echo "Go to http://localhost/gcw/"
+echo "Go to $(curl ifconfig.me)/gcw"
 
 echo "Scripted Finished Execution."

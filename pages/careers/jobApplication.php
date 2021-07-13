@@ -21,7 +21,10 @@
     <form action="jobApplication.php" method="post" onsubmit="return ValidateForm(this);">
         <table class="jobApplication">
             <tr>
-                <td><h1>Apply For Job</h1></td>
+                <td>
+                    <h1>Apply For Job</h1>
+                    <a class="links" href="index.php">< Back</a>
+                </td>
             </tr>
             <tr>
                 <td>
@@ -120,8 +123,12 @@
         }
         else{
             $sql = "INSERT INTO `jobApplications` VALUES ('".$_POST["First_Name"]."','".$_POST["Last_Name"]."','".$_POST["Email_Address"]."','".$_POST["Portfolio"]."','".$_POST["Position"]."','".$_POST["Salary"]."','".$_POST["StartDate"]."','".$_POST["Phone"]."','".$_POST["Fax"]."','".$_POST["Relocate"]."','".$_POST["Organization"]."','".$_POST["Reference"]."');";
-            mysqli_query($conn, $sql);
-            echo "<script>displayMessage('Registered Succesfully.')</script>";
+            if(mysqli_query($conn, $sql)){
+                echo "<script>displayMessage('Registered Succesfully.')</script>";
+            }
+            else{
+                echo "<script>displayMessage('Cannot Registered Succesfully. PLease Check Your Form.')</script>";
+            }
         }
         include "../../common/closeDbConn.php";
     }
