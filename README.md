@@ -70,13 +70,15 @@ To run this project, You need LAMP(Apache, MySQL, PHP) Webserver:
 
 
  ## if you don't want to waste time in lot of these stuffs
- i would suggest you to run the bash script below (a automated script) which was created by me which will work in all Ubuntu/Ubuntu Derivates
+ i would suggest you to run the bash script below (a automated script).
 
- Download the [Script](scripts/) Folder and Then run the below after CDing into the folder script
+ **Fedora/Fedora Derivates/Cent OS/Amazon Linux.**
 
  > $ curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/scripts/auto_setup.sh && sh ./auto_setup.sh
+ 
+ **Ubuntu/Ubuntu Derivatives**
 
- in bash shell where you have kept the whole downloaded script folder along with sql files.
+ > $ curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/scripts/auto_setup_ubuntu.sh && sh ./auto_setup_ubuntu.sh
 
  *Remember You Need Sudo Previleges To Do This. Before Installing And Running This script Take a look at the [script](scripts/auto_setup.sh)*
 
