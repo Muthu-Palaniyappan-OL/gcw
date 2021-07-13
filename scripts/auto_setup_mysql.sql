@@ -1,3 +1,9 @@
+/*Create User muthu*/
+CREATE USER 'muthu'@'localhost' IDENTIFIED BY 'muthumuthu';
+
+/*Giving privileges to muthu*/
+GRANT ALL PRIVILEGES ON * . * TO 'muthu'@'localhost';
+
 /*CREATING A DB*/
 CREATE DATABASE gcw_db;
 

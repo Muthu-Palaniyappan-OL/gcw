@@ -91,11 +91,13 @@ function makeAnnouncement() {
 }
 
 
+// Called When A Job is deleted
 function deleteJobOpening(whichAnnouncement) {
   location.href = 'php/deleteJobOpening.php?s=' + whichAnnouncement;
 }
 
 
+// Called When A contactus submision is deleted
 function deleteTheContactus(whichAnnouncement) {
   location.href = 'php/deleteContactUs.php?s=' + whichAnnouncement;
 }
