@@ -34,7 +34,7 @@ sudo service httpd restart
 
 echo "Installing php..."
 # install php
-sudo yum -y install php-cli php php-mysql php-pear-MDB2-Driver-mysqli.noarch php-mcrypt php-mbstring php-curl php-xml php-pear php-json
+sudo yum -y install php-cli php php-mysql php-pear-MDB2-Driver-mysqli.noarch php-mcrypt php-mbstring php-curl php-xml php-json
 
 echo "Restarting the Apache2 And MySQL..."
 sudo service httpd restart
@@ -47,10 +47,10 @@ sudo cp -r /var/www/html/gcw/* /var/www/html
 sudo rm -r /var/www/html/gcw
 
 echo "Downloading sql..."
-curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/admin/backup/auto_setup_mysql.sql
+curl -O https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/admin/backup/auto_setup_mysql.sql
 
 echo "Executing sql..."
-sudo mysql < https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/admin/backup/auto_setup_mysql.sql
+sudo mysql < ./auto_setup_mysql.sql
 
 # I prefer You to run this command frequently or better add a crontab to automate this process
 ###############################################################
