@@ -43,7 +43,7 @@ sudo service mysqld restart
 echo "Downloading Repo..."
 sudo git clone https://github.com/Muthu-Palaniyappan-OL/gcw.git /var/www/html/gcw
 sudo chmod -R 777 /var/www/html
-sudo cp -r /var/www/html/gcw /var/www/html 
+sudo cp -r /var/www/html/gcw/* /var/www/html 
 sudo rm -r /var/www/html/gcw
 
 echo "Downloading sql..."
