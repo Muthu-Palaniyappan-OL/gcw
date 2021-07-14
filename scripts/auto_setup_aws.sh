@@ -34,16 +34,17 @@ sudo service httpd restart
 
 echo "Installing php..."
 # install php
-sudo yum -y install php-cli php php-mysql php-pear-MDB2-Driver-mysqli.noarch php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json
+sudo yum -y install php-cli php php-mysql php-pear-MDB2-Driver-mysqli.noarch php-mcrypt php-mbstring php-curl php-xml php-pear php-json
 
 echo "Restarting the Apache2 And MySQL..."
 sudo service httpd restart
 sudo service mysqld restart
 
 echo "Downloading Repo..."
-sudo git clone https://github.com/Muthu-Palaniyappan-OL/gcw.git /var/www/html
-sudo cp -R /var/www/html/gcw /var/www/html 
-sudo rm -R /var/www/html/gcw
+sudo git clone https://github.com/Muthu-Palaniyappan-OL/gcw.git /var/www/html/gcw
+sudo chmod -R 777 /var/www/html
+sudo cp -r /var/www/html/gcw /var/www/html 
+sudo rm -r /var/www/html/gcw
 
 echo "Downloading sql..."
 curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/admin/backup/auto_setup_mysql.sql
