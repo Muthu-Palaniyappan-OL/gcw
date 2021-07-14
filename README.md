@@ -74,15 +74,15 @@ To run this project, You need LAMP(Apache, MySQL, PHP) Webserver:
 
  **Fedora/Fedora Derivates/Cent OS/Amazon Linux.**
 
- > $ curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/scripts/auto_setup.sh && sh ./auto_setup.sh
+ > curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/scripts/auto_setup.sh && sh ./auto_setup.sh
  
  **Ubuntu/Ubuntu Derivatives**
 
- > $ curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/scripts/auto_setup_ubuntu.sh && sh ./auto_setup_ubuntu.sh
+ > curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/scripts/auto_setup_ubuntu.sh && sh ./auto_setup_ubuntu.sh
  
  **Deploying in AWS Amazon Linux**
 
- > $ curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/scripts/auto_setup_aws.sh && sh ./auto_setup_aws.sh
+ > curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/scripts/auto_setup_aws.sh && sh ./auto_setup_aws.sh
 
  *Remember You Need Sudo Previleges To Do This. Before Installing And Running This script Take a look at the [script](scripts/auto_setup.sh)*
 
