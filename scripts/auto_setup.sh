@@ -44,10 +44,10 @@ echo "Downloading Repo..."
 sudo git clone https://github.com/Muthu-Palaniyappan-OL/gcw.git /var/www/html
 
 echo "Downloading sql..."
-curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/scripts/auto_setup_mysql.sql
+curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/admin/backup/auto_setup_mysql.sql
 
 echo "Executing sql..."
-sudo mysql < https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/scripts/auto_setup_mysql.sql
+sudo mysql < https://github.com/Muthu-Palaniyappan-OL/gcw/blob/admin/backup/auto_setup_mysql.sql
 
 # I prefer You to run this command frequently or better add a crontab to automate this process
 ###############################################################

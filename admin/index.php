@@ -43,6 +43,7 @@
             <button onclick="openContentDiv('editpageContent');">Edit Pages</button>
             <button onclick="openContentDiv('contactUsContent');">Contactus Submissions</button>
             <button onclick="openContentDiv('jobApplicationsContent');">Job Applications</button>
+            <button onclick="openContentDiv('backUp');">Back Up</button>
             <button onclick="logout()">Log Out</button>
         </aside>
 
@@ -171,6 +172,13 @@
                     ?>
                 </table>
 
+            </div>
+            
+            <!-- This is the Div where You can take backup of your data -->
+            <div class="backUp">
+                <form action="index.php" method="post" class="backUp-Form">
+                    <a download href="./backup/auto_setup_mysql.sql">Download The Backup Data</a>
+                </form>
             </div>
         </div>
     </main>

@@ -79,6 +79,10 @@ To run this project, You need LAMP(Apache, MySQL, PHP) Webserver:
  **Ubuntu/Ubuntu Derivatives**
 
  > $ curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/scripts/auto_setup_ubuntu.sh && sh ./auto_setup_ubuntu.sh
+ 
+ **Deploying in AWS Amazon Linux**
+
+ > $ curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/scripts/auto_setup_aws.sh && sh ./auto_setup_aws.sh
 
  *Remember You Need Sudo Previleges To Do This. Before Installing And Running This script Take a look at the [script](scripts/auto_setup.sh)*
 
@@ -95,7 +99,26 @@ To run this project, You need LAMP(Apache, MySQL, PHP) Webserver:
  */10 * * * * rm /var/lib/php/sessions/*
  ```
  this to your crontab
+
+ ## Usage
+
+ For Cleaning Unwanted Sessions
+ ```
+ php /var/www/html/gcw/admin/php/killAllUnwantedSessions.php
+ ```
+
+ For Cleaning Sessions in /var/lib/php/sessions (*ONLY SUDO USER CAN DO THIS*)
+ ```
+ rm /var/lib/php/sessions/
+ ```
+
+ For Taking BackUp run the below command.
+ ```
+ sudo sh /var/www/html/gcw/scripts/auto_backup.sh
+ ```
+
+ you can download the data which you backed up in admin page.
  
-## Contact
+ ## Contact
  
  For more information and suggestions contact [Muthu Palaniyappan OL](mailto:muthu892542@gmail.com).

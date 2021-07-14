@@ -10,6 +10,8 @@ function closeAllContentDivs(){
     $(".contactUsContent").css("display","none");
     $(".jobApplicationsContent").hide();
     $(".jobApplicationsContent").css("display","none");
+    $(".backUp").hide();
+    $(".backUp").css("display","none");
 }
 
 // This is called when a user clicks the button
@@ -29,6 +31,9 @@ function openContentDiv(whatDivToOpen){
     }
     if(whatDivToOpen == "jobApplicationsContent"){
         $(".jobApplicationsContent").show();
+    }
+    if(whatDivToOpen == "backUp"){
+        $(".backUp").show();
     }
 }
 

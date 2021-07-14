@@ -1,44 +1,44 @@
 #!/bin/bash
 
 ############################################################################
-#             THIS WORKS ONLY FOR FEDORA BASED LINUX DISTRO                #
-# FOR ANY OTHER LINUX DISTRO CHANGE APT TO YOUR PARTICULAR PACKAGE MANAGER #
+#    THIS IS SUPPOSED TO BE USED IN AMAZON LINUX IMAGE IN AWS SERVERS      #
+# FOR ANY OTHER LINUX DISTRO CHANGE YUM TO YOUR PARTICULAR PACKAGE MANAGER #
 #           UPDATE COMMAND TO YOUR PACKAGE MANAGER'S UPDATE COMMAND        #
 #                       THIS SCRIPT REQUIRES SUDO POWER                    #
 ############################################################################
 
 echo "Updating your repo..."
 # Updating your Reporsitory
-sudo apt update -y
+sudo yum -y update
 
 # installing GIT
 echo "Installing git..."
-sudo apt install git -y
+sudo yum -y install git
 
 echo "installing webserver..."
 # Install httpd webserver
-sudo apt install apache2 -y
+sudo yum -y install httpd
 
 # Starting httpd
 echo "Starting httpd..."
-sudo service apache2 start
+sudo service httpd start
 
 echo "Installing Mysql..."
 # install mysql-server
-sudo apt install mysql-server mysql -y 
+sudo yum -y install mysql-server mysql 
 
 # Starting MySQL
 echo "Starting Mysql..."
-sudo service mysql start
-sudo service apache2 restart
+sudo service mysqld start
+sudo service httpd restart
 
 echo "Installing php..."
 # install php
-sudo apt install php-cli php php-mysql php-pear-MDB2-Driver-mysqli.noarch php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json -y
+sudo yum -y install php-cli php php-mysql php-pear-MDB2-Driver-mysqli.noarch php-mcrypt php-mbstring php-curl php-xml php-pear php-bcmath php-json
 
 echo "Restarting the Apache2 And MySQL..."
-sudo service apache2 restart
-sudo service mysql restart
+sudo service httpd restart
+sudo service mysqld restart
 
 echo "Downloading Repo..."
 sudo git clone https://github.com/Muthu-Palaniyappan-OL/gcw.git /var/www/html
