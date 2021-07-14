@@ -122,7 +122,7 @@
             echo "<script>displayMessage('Aldready Registered.')</script>";
         }
         else{
-            $sql = "INSERT INTO `jobApplications` VALUES ('".$_POST["First_Name"]."','".$_POST["Last_Name"]."','".$_POST["Email_Address"]."','".$_POST["Portfolio"]."','".$_POST["Position"]."','".$_POST["Salary"]."','".$_POST["StartDate"]."','".$_POST["Phone"]."','".$_POST["Fax"]."','".$_POST["Relocate"]."','".$_POST["Organization"]."','".$_POST["Reference"]."');";
+            $sql = "INSERT INTO `jobApplications` VALUES ('".mysqli_real_escape_string($conn, $_POST["First_Name"])."','".mysqli_real_escape_string($conn, $_POST["Last_Name"])."','".mysqli_real_escape_string($conn, $_POST["Email_Address"])."','".mysqli_real_escape_string($conn, $_POST["Portfolio"])."','".mysqli_real_escape_string($conn, $_POST["Position"])."','".mysqli_real_escape_string($conn, $_POST["Salary"])."','".mysqli_real_escape_string($conn, $_POST["StartDate"])."','".mysqli_real_escape_string($conn, $_POST["Phone"])."','".mysqli_real_escape_string($conn, $_POST["Fax"])."','".mysqli_real_escape_string($conn, $_POST["Relocate"])."','".mysqli_real_escape_string($conn, $_POST["Organization"])."','".mysqli_real_escape_string($conn, $_POST["Reference"])."');";
             if(mysqli_query($conn, $sql)){
                 echo "<script>displayMessage('Registered Succesfully.')</script>";
             }

@@ -91,7 +91,7 @@
 <?php
     if(isset($_POST["contactUs"])){
         include "../../common/databaseConnect.php";
-        $sql = "INSERT INTO `contactUsInfo` (`name`, `email`, `message`) VALUES('".$_POST["name"]."','".$_POST["email"]."','".$_POST["message"]."')";
+        $sql = "INSERT INTO `contactUsInfo` (`name`, `email`, `message`) VALUES('".mysqli_real_escape_string($conn, $_POST["name"])."','".mysqli_real_escape_string($conn, $_POST["email"])."','".mysqli_real_escape_string($conn, $_POST["message"])."')";
         if(mysqli_query($conn, $sql)){
             echo "<script>displayMessage('Thank You For Contacting Us')</script>";
         }

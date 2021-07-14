@@ -56,7 +56,7 @@
             $sql = "SELECT * FROM `newsletter_subscribers` WHERE email='".$_POST["email_newsletter"]."';";
             $result = mysqli_query($conn,$sql);
             if(mysqli_num_rows($result)==0){
-                $sql = "INSERT INTO `newsletter_subscribers` VALUES ('".$_POST["email_newsletter"]."');";
+                $sql = "INSERT INTO `newsletter_subscribers` VALUES ('".mysqli_real_escape_string($conn, $_POST["email_newsletter"])."');";
                 $result = mysqli_query($conn,$sql);
                 echo "<script>displayMessage('Thanks For Subscribing');</script>";
             }
