@@ -42,6 +42,8 @@ sudo service mysqld restart
 
 echo "Downloading Repo..."
 sudo git clone https://github.com/Muthu-Palaniyappan-OL/gcw.git /var/www/html
+sudo cp -R /var/www/html/gcw /var/www/html 
+sudo rm -R /var/www/html/gcw
 
 echo "Downloading sql..."
 curl -O https://github.com/Muthu-Palaniyappan-OL/gcw/blob/main/admin/backup/auto_setup_mysql.sql
