@@ -92,6 +92,15 @@ To run this project, You need LAMP(Apache, MySQL, PHP) Webserver:
 
  *Remember You Need Sudo Previleges To Do This. Before Installing And Running This script Take a look at the [script](scripts/auto_setup.sh)*
 
+ execeute 
+```
+CREATE USER 'muthu'@'localhost' IDENTIFIED BY 'muthumuthu';
+GRANT ALL PRIVILEGES ON * . * TO 'muthu'@'localhost';
+exit;
+```
+after typing sudo mysql in comand line
+
+
  ## Important Note
  I prefer you to Run 
  ```

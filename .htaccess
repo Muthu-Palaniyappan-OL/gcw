@@ -1,3 +1,4 @@
+DirectoryIndex index.php
 ErrorDocument 403 /gcw/common/err/403.html
 ErrorDocument 404 /gcw/common/err/404.html
 ErrorDocument 500 /gcw/common/err/500.html

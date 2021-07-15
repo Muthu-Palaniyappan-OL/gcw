@@ -38,6 +38,16 @@ form.ContactUsForm{
     padding: 10px;
     background-color: #ccc;
 }
+@media screen and (max-width: 600px) {
+    form.ContactUsForm{
+        grid-template-areas:
+        "heading heading" 
+        "name name"
+        "email email"
+        "message message"
+        "submit submit";
+    }
+}
 form.ContactUsForm > input, form.ContactUsForm > textarea{
     outline: 0px;
     border: 0px;

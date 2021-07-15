@@ -23,20 +23,20 @@ sudo yum -y install httpd
 echo "Starting httpd..."
 sudo service httpd start
 
-echo "Installing Mysql..."
+echo "Installing MariaDB..."
 # install mysql-server
-sudo yum -y install mysql-server mysql 
+sudo dnf install mariadb mariadb-server
 
-# Starting MySQL
-echo "Starting Mysql..."
-sudo service mysqld start
+# Starting Mariadb
+echo "Starting MariaDb..."
+sudo service mariadb start
 sudo service httpd restart
 
 echo "Installing php..."
 # install php
 sudo yum -y install php-cli php php-mysql php-pear-MDB2-Driver-mysqli.noarch php-mcrypt php-mbstring php-curl php-xml php-json
 
-echo "Restarting the Apache2 And MySQL..."
+echo "Restarting the HTTPD And MARIADB..."
 sudo service httpd restart
 sudo service mysqld restart
 
@@ -58,6 +58,6 @@ sudo mysql < ./auto_setup_mysql.sql
 ###############################################################
 
 echo "Website is live: "
-echo "Go to $(curl ifconfig.me)/gcw"
+echo "Go to $(curl ifconfig.me)"
 
 echo "Scripted Finished Execution."

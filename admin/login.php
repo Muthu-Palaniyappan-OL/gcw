@@ -21,7 +21,7 @@
 </head>
 <body>
     <header>
-        <h1>Generic Coprate Company - Dashboard Login</h1>
+        <h1><a href="../index.php">Generic Corporate Company<a> - Dashboard Login</h1>
     </header>
 
     <main class="loginDiv">

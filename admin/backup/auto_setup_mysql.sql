@@ -1,6 +1,3 @@
-CREATE USER 'muthu'@'localhost' IDENTIFIED BY 'muthumuthu';
-GRANT ALL PRIVILEGES ON * . * TO 'muthu'@'localhost';
-
 /* CFREATING DATABASE AND USING IT */
 CREATE DATABASE gcw_db;
 USE gcw_db;

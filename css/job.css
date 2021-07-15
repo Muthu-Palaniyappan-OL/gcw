@@ -21,4 +21,10 @@ h2{
     padding: 10px;
 }
 
+@media screen and (max-width: 596px){
+    main{
+        grid-template-columns: 1fr;
+    }
+}
+
 /*******************************************/

@@ -19,7 +19,7 @@
     <?php include "../common/php_common_functions.php" ?>
 
     <!-- Page Title-->
-    <title>Generic Corporate Company - Admin Page</title>
+    <title><a href="../index.php">Generic Corporate Company<a> - Admin Page</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">

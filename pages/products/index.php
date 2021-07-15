@@ -27,7 +27,7 @@
     <?php
 
         //Intro Logo Loading PHP Embeded Script
-        if(isset(($_COOKIE["visited"])) and $_COOKIE["visited"]==true){
+        if($_COOKIE["visited"]==true){
             ;
         }
         else{
