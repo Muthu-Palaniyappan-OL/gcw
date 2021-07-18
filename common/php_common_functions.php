@@ -23,7 +23,8 @@ function recordUser($pagename){
         $sql ="UPDATE `visitor_count` SET visit_count=visit_count+1 WHERE `date`='".date("Y-m-d")."' AND `page`='".$pagename."';";
         mysqli_query($conn, $sql);
         // User $_SERVER['REMOTE_ADDR'] When deploying
-        $_SESSION["IP"] = trim(shell_exec("dig +short myip.opendns.com @resolver1.opendns.com")); //reading public IP address
+        // For localhost trim(shell_exec("dig +short myip.opendns.com @resolver1.opendns.com"))
+        $_SESSION["IP"] = $_SERVER['REMOTE_ADDR']; //reading public IP address
         $_SESSION["country"] = json_decode(file_get_contents("https://api.country.is/".$_SESSION["IP"]))->country;
         $_SESSION["userType"] = "normalUser"; //Declaring the user type whether admin or non admin
         $_SESSION["Device"] = $_SERVER["HTTP_USER_AGENT"]; //Gets browser and device details

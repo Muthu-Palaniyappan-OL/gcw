@@ -3,7 +3,6 @@
 * [Problem Project Solves](#problem-it-solves)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Project Plan](#project-plan)
 * [Get In Touch With Creator](#contact)
 
 ## General info
@@ -75,19 +74,19 @@ To run this project, You need LAMP(Apache, MySQL, PHP) Webserver:
  **Fedora/Fedora Derivates/Cent OS/Amazon Linux.**
 
  ```
- curl -O https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup.sh && sh ./auto_setup.sh
+ curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup.sh | sudo bash
  ```
 
  **Ubuntu/Ubuntu Derivatives**
 
  ```
- curl -O https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup_ubuntu.sh && sh ./auto_setup_ubuntu.sh
+ curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup_ubuntu.sh | sudo bash
  ```
  
  **Deploying in AWS Amazon Linux**
 
  ```
- curl -O https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup_aws.sh && sudo sh ./auto_setup_aws.sh
+ curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup_aws.sh | sudo bash
  ```
 
  *Remember You Need Sudo Previleges To Do This. Before Installing And Running This script Take a look at the [script](scripts/auto_setup.sh)*
@@ -114,6 +113,8 @@ after typing sudo mysql in comand line
  */10 * * * * rm /var/lib/php/sessions/*
  ```
  this to your crontab
+
+ You can enable .htaccess if you want
 
  ## Usage
 

@@ -46,11 +46,8 @@ sudo chmod -R 777 /var/www/html
 sudo cp -r /var/www/html/gcw/* /var/www/html 
 sudo rm -r /var/www/html/gcw
 
-echo "Downloading sql..."
-curl -O https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/admin/backup/auto_setup_mysql.sql
-
-echo "Executing sql..."
-sudo mysql < ./auto_setup_mysql.sql
+echo "Executing SQL..."
+curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/admin/backup/auto_setup_mysql.sql | sudo mysql 
 
 # I prefer You to run this command frequently or better add a crontab to automate this process
 ###############################################################
