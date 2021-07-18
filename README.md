@@ -1,140 +1,98 @@
 ### Table of contents
-* [About](#general-info)
+* [General Info](#general-info)
+* [Features](#features)
 * [Problem Project Solves](#problem-it-solves)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Deploying in AWS Amazon Linux](#deploying-in-aWS-amazon-linux)
 * [Get In Touch With Creator](#contact)
 
 ## General info
-    This is a website and needed technological solution for any generic corporate company.
+This is a website and also needed technological solution for any generic corporate company who needs quick and fast website and customisable and makes the company not depended on any other company for designing of the website and maintaining the website. This project includes a shell script which can set up the website automatically in a AWS Instance in seconds. So a corporate company can host a website under a minute(*Including creating a aws account and and starting an instance*). This website also packs features such that a person who doesn't know any programming language can edit and maintain the website. This website also protects the company for common attacks like SQL Injections.
+
+## Features
+* Superfast and simple procedure to setup the website in AWS/Azure/Any cloud service provider (Automated Shell Script).
+* Protection From SQL Injection Attacks (Enhanced Security).
+* Edit website pages without knowing any programming language (From Admin Page).
+* Create Job and make announcements without knowing any programming language (From Admin Page).
+* Receive Job applications from candidates and receive contact us form in admin page.
+* Superfast and easy backup solution. Back up your data in 10 seconds. (Automated Shell Script).
+* Makes your company not depended on any other company for maintaining your customer data.
+* Create your website in seconds when you host it on AWS.
 
 ## Problem It Solves
 Any company which goes for IPO needs a basic website as staturatory compliant.
-Assume a normal steel plant goes for IPO it needs to spend some money on building the website and building websites this way will make company be dependant on other companies for its website.
-Using web designer makes the website not that much flexible for future needs.
- 
+Assume a normal steel plant goes for IPO it needs to spend some money on building the website and building websites using web designer or outsourcing it to any other company will make steel company be dependant on other companies for its website and its customer data may not be secure.
+Using web designer makes the website not that much flexible for future needs. So using the source code from this project can be the best solution.
+
 ## Technologies
 Project is created with:
 * HTML5
 * CSS3
 * Java Script
 * PHP 7.4.3
-* MySQL 8.0.25
+* MySQL 8.0.25 (Even Works With MariaDB)
 	
 ## Setup
-To run this project, You need LAMP(Apache, MySQL, PHP) Webserver:
 
- - To Install Necessary Softwares run these in your shell in Ubuntu/Ubuntu-based OS to install Apache2, MySQL, PHP:
+**Fedora/Fedora Derivates/Cent OS**
 
- ```
- $ sudo apt install apache2
- $ sudo apt install mysl-server
- $ mysql_secure_installation
- $ sudo apt install php php-mysql
- ```
- 
- - Clone this repositary in /var/www/html directory using the below command.
- 
- ```
- git clone https://github.com/Muthu-Palaniyappan-OL/gcw.git
- ```
- 
- - Run these SQL queries.
-
- For Geting into MySQL CLI:
-
- ```
- $ sudo mysql
- ```
- Run these in MySQL CLI:
-
- ```
- mysql> CREATE DATABASE gcw_db;
- mysql> USE gcw_db;
- mysql> CREATE TABLE newsletter_subscribers(email VARCHAR(20), PRIMARY KEY (email));
- mysql> CREATE TABLE `gcw_db`.`visitor_count` ( `id` INT(255) NOT NULL AUTO_INCREMENT , `page` VARCHAR(15) NOT NULL , `visit_count` INT(255) NOT NULL , `date` DATE NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
- mysql> CREATE TABLE activeUser(session VARCHAR(30), time TIME, ipaddr VARCHAR(25), PRIMARY KEY (session));
- mysql> CREATE TABLE `gcw_db`.`media` ( `id` INT(15) NOT NULL AUTO_INCREMENT , `title` INT(50) NOT NULL , `meta` INT(25) NOT NULL , `text` VARCHAR(1000) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
- mysql> CREATE TABLE `gcw_db`.`contactUsInfo` ( `name` VARCHAR(30) NOT NULL , `email` VARCHAR(40) NOT NULL , `message` VARCHAR(1000) NOT NULL , PRIMARY KEY (`email`)) ENGINE = InnoDB;
- mysql> CREATE TABLE `gcw_db`.`jobs` ( `title` VARCHAR(50) NOT NULL , `discription` VARCHAR(1000) NOT NULL , `id` INT(10) NOT NULL AUTO_INCREMENT , PRIMARY KEY (`id`)) ENGINE = InnoDB;
- mysql> CREATE TABLE `gcw_db`.`jobApplications` ( `First_Name` VARCHAR(30) NOT NULL , `Last_Name` VARCHAR(30) NOT NULL , `Email_Address` VARCHAR(50) NOT NULL , `Portfolio` VARCHAR(30) NOT NULL , `Position` VARCHAR(30) NOT NULL , `Salary` INT(10) NOT NULL , `StartDate` VARCHAR(30) NOT NULL , `Phone` BIGINT(255) NOT NULL , `Fax` VARCHAR(15) NOT NULL , `Relocate` VARCHAR(30) NOT NULL , `Organization` VARCHAR(40) NOT NULL , `Reference` VARCHAR(100) NOT NULL, PRIMARY KEY (Email_Address)) ENGINE = InnoDB;
- ```
- Run This to Exit MySQL CLI:
- 
- ```
- mysql> exit;
- ```
-
- - Goto to URl **localhost/gcw** via your browser to see your website.
-
-
- ## if you don't want to waste time in lot of these stuffs
- i would suggest you to run the bash script below (a automated script).
-
- **Fedora/Fedora Derivates/Cent OS/Amazon Linux.**
-
- ```
- curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup.sh | sudo bash
- ```
-
- **Ubuntu/Ubuntu Derivatives**
-
- ```
- curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup_ubuntu.sh | sudo bash
- ```
- 
- **Deploying in AWS Amazon Linux**
-
- ```
- curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup_aws.sh | sudo bash
- ```
-
- *Remember You Need Sudo Previleges To Do This. Before Installing And Running This script Take a look at the [script](scripts/auto_setup.sh)*
-
- execeute 
 ```
-CREATE USER 'muthu'@'localhost' IDENTIFIED BY 'muthumuthu';
-GRANT ALL PRIVILEGES ON * . * TO 'muthu'@'localhost';
+curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup.sh | sudo bash
+```
+
+**Ubuntu/Ubuntu Derivatives**
+
+```
+curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup_ubuntu.sh | sudo bash
+```
+
+## Deploying in AWS Amazon Linux
+
+if you want to depoly this website in AWS/Azure/Any Cloud Service provider. Execute this comand in CLI of your server.
+
+```
+curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup_aws.sh | sudo bash
+```
+
+*Remember You Need root Previleges To Do This. Before Installing And Running This script Take a look at the [script](scripts/auto_setup.sh)*
+
+After Succesfull Execution of above script execute the following commands
+
+```
+sudo mysql
+CREATE USER 'gcw'@'localhost' IDENTIFIED BY 'gcw';
+GRANT ALL PRIVILEGES ON * . * TO 'gcw'@'localhost';
 exit;
 ```
-after typing sudo mysql in comand line
 
+*Here i create gcw user by default. you can create your own user if you want but you have to change in the password and username which you create here [common/databaseConnect.php](common/databaseConnect.php), I recommend you to do so.*
 
- ## Important Note
- I prefer you to Run 
- ```
- php /var/www/html/gcw/admin/php/killAllUnwantedSessions.php
- ```
- command frequently so that everything is clean or add a crontab for automating this
+## Important Note
 
- if you picking to use crontab add
- ```
- */10 * * * * php /var/www/html/gcw/admin/php/killAllUnwantedSessions.php
- */10 * * * * rm /var/lib/php/sessions/*
- ```
- this to your crontab
+I prefer you to Run 
 
- You can enable .htaccess if you want
+```
+php /var/www/html/gcw/admin/php/killAllUnwantedSessions.php
+```
+command frequently so that everything is clean or add a crontab for automating this
 
- ## Usage
+if your picking to use crontab add
+```
+*/10 * * * * php /var/www/html/gcw/admin/php/killAllUnwantedSessions.php
+*/10 * * * * rm /var/lib/php/sessions/*
+```
+this to your crontab
 
- For Cleaning Unwanted Sessions
- ```
- php /var/www/html/gcw/admin/php/killAllUnwantedSessions.php
- ```
+You can enable .htaccess if you want in apache2 configuration.
 
- For Cleaning Sessions in /var/lib/php/sessions (*ONLY SUDO USER CAN DO THIS*)
- ```
- rm /var/lib/php/sessions/
- ```
+For Taking BackUp run the below command.
+```
+sudo sh /var/www/html/gcw/scripts/auto_backup.sh
+```
 
- For Taking BackUp run the below command.
- ```
- sudo sh /var/www/html/gcw/scripts/auto_backup.sh
- ```
+you can download your data which you backed up now in admin page.
 
- you can download the data which you backed up in admin page.
+## Contact
  
- ## Contact
- 
- For more information and suggestions contact [Muthu Palaniyappan OL](mailto:muthu892542@gmail.com).
+For more information and suggestions contact [Muthu Palaniyappan OL](mailto:muthu892542@gmail.com).

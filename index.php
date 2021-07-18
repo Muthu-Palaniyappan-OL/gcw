@@ -63,7 +63,7 @@
     <?php include "common/footer.php"; ?>
 
     <?php
-        // This adds Save And Cancell Buttons If The userType is Admin
+        // This adds Save And Cancel Buttons If The userType is Admin
         adminPrevileges("landingpage");
     ?>
 </body>
