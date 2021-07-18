@@ -6,7 +6,7 @@
 * [Get In Touch With Creator](#contact)
 
 ## General info
-This is a website and needed technological solution for any generic corporate company.
+    This is a website and needed technological solution for any generic corporate company.
 
 ## Problem It Solves
 Any company which goes for IPO needs a basic website as staturatory compliant.
