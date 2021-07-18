@@ -47,7 +47,7 @@
     
     if(isset($_POST["newsletter_submit"])){
         //email php validation
-        $conn = mysqli_connect("localhost:3306","muthu","muthumuthu","gcw_db");
+        include "databaseConnect.php";
         if (!filter_var($_POST["email_newsletter"], FILTER_VALIDATE_EMAIL)) {
             echo "<script>redTheEmailBox();</script>";
         }
@@ -64,6 +64,6 @@
                 echo "<script>displayMessage('Aldready Subscribed');</script>";
             }
         }
-        mysqli_close($conn);
+        include "closeDbConn.php";
     }
 ?>
