@@ -176,6 +176,8 @@
             
             <!-- This is the Div where You can take backup of your data -->
             <div class="backUp">
+                Run this command before downloading the backup of the database. <br><br>
+                sudo sh /var/www/html/scripts/auto_backup.sh <br><br>
                 <form action="index.php" method="post" class="backUp-Form">
                     <a download href="./backup/auto_setup_mysql.sql">Download The Backup Data</a>
                 </form>

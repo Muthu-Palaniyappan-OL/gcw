@@ -38,13 +38,13 @@ Project is created with:
 **Fedora/Fedora Derivates/Cent OS**
 
 ```
-curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/main/scripts/auto_setup.sh | sudo bash
+curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup.sh | sudo bash
 ```
 
 **Ubuntu/Ubuntu Derivatives**
 
 ```
-curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/main/scripts/auto_setup_ubuntu.sh | sudo bash
+curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup_ubuntu.sh | sudo bash
 ```
 
 ## Deploying in AWS Amazon Linux
@@ -52,12 +52,12 @@ curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/main/scripts/auto_s
 if you want to depoly this website in AWS/Azure/Any Cloud Service provider. Execute this comand in CLI of your server.
 
 ```
-curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/main/scripts/auto_setup_aws.sh | sudo bash
+curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup_aws.sh | sudo bash
 ```
 
 *Remember You Need root Previleges To Do This. Before Installing And Running This script Take a look at the [script](scripts/auto_setup.sh)*
 
-After Succesfull Execution of above script execute the following commands to create a **default user in mysql**
+After Succesfull Execution of above script execute the following commands to create a **default user in mysql** (*You need to be root for this*)
 
 ```
 sudo mysql
