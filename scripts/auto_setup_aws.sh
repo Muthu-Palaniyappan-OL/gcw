@@ -25,7 +25,7 @@ sudo service httpd start
 
 echo "Installing MariaDB..."
 # install mysql-server
-sudo dnf install mariadb mariadb-server
+sudo yum install mariadb mariadb-server
 
 # Starting Mariadb
 echo "Starting MariaDb..."
@@ -38,7 +38,7 @@ sudo yum -y install php-cli php php-mysql php-pear-MDB2-Driver-mysqli.noarch php
 
 echo "Restarting the HTTPD And MARIADB..."
 sudo service httpd restart
-sudo service mysqld restart
+sudo service mariadb restart
 
 echo "Downloading Repo..."
 sudo git clone https://github.com/Muthu-Palaniyappan-OL/gcw.git /var/www/html/gcw
