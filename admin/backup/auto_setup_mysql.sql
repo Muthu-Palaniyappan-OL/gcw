@@ -40,6 +40,8 @@ CREATE TABLE `activeUser` (
   `session` varchar(30) NOT NULL,
   `time` time DEFAULT NULL,
   `ipaddr` varchar(25) DEFAULT NULL,
+  `device` varchar(200) DEFAULT NULL,
+  `country` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`session`)
 ) ;
 

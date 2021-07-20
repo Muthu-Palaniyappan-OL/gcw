@@ -38,13 +38,13 @@ Project is created with:
 **Fedora/Fedora Derivates/Cent OS**
 
 ```
-curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup.sh | sudo bash
+curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/main/scripts/auto_setup.sh | sudo bash
 ```
 
 **Ubuntu/Ubuntu Derivatives**
 
 ```
-curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup_ubuntu.sh | sudo bash
+curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/main/scripts/auto_setup_ubuntu.sh | sudo bash
 ```
 
 ## Deploying in AWS Amazon Linux
@@ -52,12 +52,12 @@ curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/au
 if you want to depoly this website in AWS/Azure/Any Cloud Service provider. Execute this comand in CLI of your server.
 
 ```
-curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/gcw/main/scripts/auto_setup_aws.sh | sudo bash
+curl https://raw.githubusercontent.com/Muthu-Palaniyappan-OL/main/scripts/auto_setup_aws.sh | sudo bash
 ```
 
 *Remember You Need root Previleges To Do This. Before Installing And Running This script Take a look at the [script](scripts/auto_setup.sh)*
 
-After Succesfull Execution of above script execute the following commands
+After Succesfull Execution of above script execute the following commands to create a **default user in mysql**
 
 ```
 sudo mysql
@@ -68,18 +68,20 @@ exit;
 
 *Here i create gcw user by default. you can create your own user if you want but you have to change in the password and username which you create here [common/databaseConnect.php](common/databaseConnect.php), I recommend you to do so.*
 
+I strongly recommend you to **change default password** in [adminpage](admin/login.php) so that you website is safe.
+
 ## Important Note
 
 I prefer you to Run 
 
 ```
-php /var/www/html/gcw/admin/php/killAllUnwantedSessions.php
+php /var/www/html/admin/php/killAllUnwantedSessions.php
 ```
 command frequently so that everything is clean or add a crontab for automating this
 
 if your picking to use crontab add
 ```
-*/10 * * * * php /var/www/html/gcw/admin/php/killAllUnwantedSessions.php
+*/10 * * * * php /var/www/html/admin/php/killAllUnwantedSessions.php
 */10 * * * * rm /var/lib/php/sessions/*
 ```
 this to your crontab
@@ -88,7 +90,7 @@ You can enable .htaccess if you want in apache2 configuration.
 
 For Taking BackUp run the below command.
 ```
-sudo sh /var/www/html/gcw/scripts/auto_backup.sh
+sudo sh /var/www/html/scripts/auto_backup.sh
 ```
 
 you can download your data which you backed up now in admin page.

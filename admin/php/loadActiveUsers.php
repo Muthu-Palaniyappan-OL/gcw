@@ -6,12 +6,9 @@
     $result = mysqli_query($conn, $sql);
     while($row = mysqli_fetch_assoc($result)){
         echo "<tr>";
-        session_abort();
-        session_id($row["session"]);
-        session_start();
-        echo "<td>".$_SESSION["IP"]."</td>";
-        echo "<td>".$_SESSION["country"]."</td>";
-        echo "<td>".$_SESSION["Device"]."</td>";
+        echo "<td>".$row["ipaddr"]."</td>";
+        echo "<td>".$row["country"]."</td>";
+        echo "<td>".$row["device"]."</td>";
         echo "</tr>";
     }
     include "../../common/closeDbConn.php";

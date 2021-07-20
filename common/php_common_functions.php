@@ -18,8 +18,6 @@ function recordUser($pagename){
 
     session_start();
     if($_SESSION["userType"]==null){
-        $sql = "INSERT INTO `activeUser` VALUES ('".session_id()."','".date("H:i:s", strtotime("+1 minutes"))."','".$_SERVER["REMOTE_ADDR"]."');";
-        mysqli_query($conn, $sql);
         $sql ="UPDATE `visitor_count` SET visit_count=visit_count+1 WHERE `date`='".date("Y-m-d")."' AND `page`='".$pagename."';";
         mysqli_query($conn, $sql);
         // User $_SERVER['REMOTE_ADDR'] When deploying
@@ -29,6 +27,8 @@ function recordUser($pagename){
         $_SESSION["userType"] = "normalUser"; //Declaring the user type whether admin or non admin
         $_SESSION["Device"] = $_SERVER["HTTP_USER_AGENT"]; //Gets browser and device details
         $_SESSION["PAttempt"] = 0; //Password Attempts
+        $sql = "INSERT INTO `activeUser` VALUES ('".session_id()."','".date("H:i:s", strtotime("+1 minutes"))."','".$_SERVER["REMOTE_ADDR"]."',".$_SESSION["Device"].", ".$_SESSION["country"].");";
+        mysqli_query($conn, $sql);
     }
     else{
         if($_SESSION["userType"]=="normalUser"){
