@@ -72,8 +72,8 @@ I strongly recommend you to **change default password** in [adminpage](admin/log
 
 
 **IT WAS SUCCESSFULLY DEPLOYED IN AWS (IN AMAZON LINUX IMAGE)**
-![Home Page](assests/img/img1.png)
-![Admin Page](assests/img/img2.png)
+![Home Page](assests/img/img1.jpg)
+![Admin Page](assests/img/img2.jpg)
 
 ## Important Note
 
