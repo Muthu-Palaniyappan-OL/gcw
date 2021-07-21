@@ -25,7 +25,7 @@ sudo service httpd start
 
 echo "Installing MariaDB..."
 # install mysql-server
-sudo yum install mariadb mariadb-server
+sudo yum install mariadb-client mariadb-server
 
 # Starting Mariadb
 echo "Starting MariaDb..."
